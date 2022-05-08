@@ -1,5 +1,7 @@
 import { motion, useViewportScroll, useTransform }from 'framer-motion'
 
+import { Link } from 'react-router-dom'
+
 // React Hooks
 import { useState, useEffect } from 'react'
 
@@ -81,8 +83,8 @@ export default function LandyingPage() {
                 <div className="one-nav-width">
                     <div className="one-nav-text">
                         <img src={logoNav} alt=""/>
-                        <a href="">HOME</a>
-                        <a href="">MENU</a>
+                        <Link to='/'>HOME</Link>
+                        <Link to='/menu'>MENU</Link>
                     </div>
                     <div className="one-nav-button">
                         <a href="../ADM/index.html">ADMINISTRAÇÃO</a>
@@ -150,7 +152,7 @@ export default function LandyingPage() {
                         whileHover={{scale : 1.2}}
                         whileTap={{scale: .9}}
                         >
-                        <a href="">MENU</a>
+                        <Link to='/menu'>MENU</Link>
                     </motion.div>
                 </div>
             </div>
