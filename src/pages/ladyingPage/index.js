@@ -74,8 +74,6 @@ export default function LandyingPage() {
 
       }, [scrollPosition]);
 
-      console.log(scrollPosition);
-
     return (
     <div className='main'>
         <div className="fx-one">
@@ -87,7 +85,7 @@ export default function LandyingPage() {
                         <Link to='/menu'>MENU</Link>
                     </div>
                     <div className="one-nav-button">
-                        <a href="../ADM/index.html">ADMINISTRAÇÃO</a>
+                        <Link to="/login">ADMINISTRAÇÃO</Link>
                     </div>
                 </div>
             </div>
@@ -359,9 +357,6 @@ export default function LandyingPage() {
                         <a href="">Licenças</a>
                     </div>
                 </div>
-            </div>
-            <div className="rodape-logo">
-                <img src="../../assets/images/logo.png" alt=""/>
             </div>
         </div>
     </div>

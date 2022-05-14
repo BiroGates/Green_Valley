@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import '../../assets/common/common.css'
 
 
-import croasaint from '../../assets/images/landyingPage/cro.png'
+import croasaint from '../../assets/images/menu/cafe.jpg'
 
 export default function Produtos() {
   return (

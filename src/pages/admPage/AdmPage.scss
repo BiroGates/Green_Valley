@@ -1,0 +1,103 @@
+.PaginaAdm{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 110vh;
+
+    .containerOne{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        background-color: #007900;
+
+        width: 30%;
+    }
+    .cO-user{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin-top: 10px;
+        
+        color: #ffffff;
+    }
+    .cO-user img{
+        height: 8em;
+    }
+    .cO-options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        color : #ffffff;
+        text-transform: uppercase;
+        font-size: 15px;
+        
+        width: 15em;
+        
+    }
+    
+    .cO-options-icon{
+        height: 2em;
+    }
+    .cO-options-seta{
+        height: 20px;
+    }   
+    .cO-options:hover{
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+        background-color: #016301;
+        border-radius: 10px;
+    }
+    .containerTwo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:  100vh;
+    }
+
+    .containerTwo > *{
+        margin-bottom: 50px;
+    }
+
+    .cT-user img{
+        height: 10em;
+    }
+    .cT-user:hover{
+        cursor: pointer;
+    }
+    .cT-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 20px;
+        
+    }
+    .cT-input p{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em;
+        margin-right: 10px;
+    }
+    .cT-input input{
+        width: 300px;
+        height: 30px;
+        
+        font-size: 1em;
+
+        background-color: #c4c4c4;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .cT-input input:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0
+    }
+}

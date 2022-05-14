@@ -1,0 +1,159 @@
+.PaginaAdm{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    height: auto;
+
+
+    .containerOne{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        background-color: #007900;
+
+        width: 50vh;
+        height: 100%;
+
+    }
+    .cO-user{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin-top: 10px;
+        
+        color: #ffffff;
+    }
+    .cO-user img{
+        height: 8em;
+    }
+    .cO-options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        color : #ffffff;
+        text-transform: uppercase;
+        font-size: 15px;
+        
+        width: 15em;
+        
+    }
+    .cO-options-icon{
+        height: 2em;
+    }
+    .cO-options-seta{
+        height: 20px;
+    }   
+    .cO-options:hover{
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+        background-color: #016301;
+        border-radius: 10px;
+    }
+    .containerTwo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+        width:  100%;
+        height: auto;
+
+        overflow: scroll;
+    }
+    .cT-search{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 30em;
+        
+        margin-bottom: 30px;
+    }
+    .cT-search img{
+        height: 40px;
+    }
+    .cT-search img:hover{
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+    }
+    .cT-search input{
+        height: 30px;
+        width: 30em;
+        background-color: #c4c4c4;
+        border: none;
+        padding: 5px;
+        border-radius: 15px;
+
+        padding-left: 15px ;
+        font-size: 1em;
+    }
+    .cT-search input:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+
+        
+
+    }
+    .cT-itens{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 10px;
+
+        width: 40em;
+        margin-bottom: 30px;
+    }
+    
+    
+    .cT-config-Comida{
+        height: 10em;
+    }
+    .cT-config-lixeira{
+        height: 30px;
+    }
+    .cT-config-lixeira:hover{
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+    }
+    .cT-itens-comida{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        height: auto;
+
+        margin-bottom: 50px;
+    }
+    .cT-config-Comida-descricao{
+        width: 20em;
+    }
+    
+    .cT-itens-editar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 20em;
+    }
+    .editar{
+        background-color: #834020;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px;
+        text-transform: uppercase;
+    }
+    .editar:hover{
+        cursor: pointer;
+        transform: scale(1.1,1.1);
+    }
+}
