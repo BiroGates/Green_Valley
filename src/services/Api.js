@@ -10,4 +10,14 @@ export default class Api{
         console.log(resp.data);
         return resp.data;
     }
+
+    async createProducts(data){
+        let resp = await api.post('/produtos/add', data);
+        console.log('Criado com sucesso!');
+    }
+
+    async deleteProducts(id){
+        let resp = await api.get(`/produtos/delete/${id}`)
+        console.log('Deletado com sucesso!');
+    }
 }
