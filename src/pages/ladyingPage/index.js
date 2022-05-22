@@ -42,8 +42,7 @@ import grao_flutuante from "../../assets/images/landyingPage/GraoCafe.png"
 import mapa from '../../assets/images/landyingPage/mapa.png'
 import ping_img from "../../assets/images/landyingPage/icone.png"
 
-//fx-six
-import feedback from "../../assets/images/landyingPage/formulario.png"
+
 
 export default function LandyingPage() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -277,38 +276,6 @@ export default function LandyingPage() {
                 </div>
             </div>
 
-        </div>
-        <div className="fx-six">
-            <div className="fx-six-titulo">
-                <h1>NOS CONTATE</h1>
-            </div>
-            <div className="feedback">
-                <p>Seu feedback é importante para nós</p>
-            </div>
-            <div className="fx-sub">
-                <div className="fx-six-image">
-                    <img src={feedback} alt="" srcset=""/>
-                </div>
-                <div className="fx-formulario">
-                    <div className="superior">
-                        <div className="name">
-                            <p>Nome</p>
-                            <input className="name-message" type="text"/>
-                        </div>
-                        <div className="name">
-                            <p>Email</p>
-                            <input className="name-message" type="text"/>
-                        </div>
-                    </div>
-                    <div className="message">
-                        <p>Mensagem</p>
-                        <textarea className="message-text" type="text"/>
-                    </div>
-                    <div className="fx-six-button">
-                        <p>ENVIAR</p>
-                    </div>
-                </div>
-            </div>
         </div>
         <div className="rodape">
             <div className="rodape-hero">

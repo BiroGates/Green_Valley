@@ -350,6 +350,7 @@ const StyledAdminPage = styled.div`
         
         padding-left: 15px;
 
+
         border: none;
         border-radius: 10px;
 
