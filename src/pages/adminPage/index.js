@@ -125,8 +125,6 @@ export default function AdminPage() {
               {products.map((item) => {
                 return(
                     <AdmProduto
-                    open={open}
-                    setOpen={setOpen}
                     setReRender={setReRender}
                     reRender={reRender}
                     descision={descision}

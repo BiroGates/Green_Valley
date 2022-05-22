@@ -5,9 +5,6 @@ import '../../assets/common/common.css';
 // Style Components
 import { StyleAdmProduto } from './styled'
 
-// Components
-import ConfirmBox from '../AdmPage/ConfirmBox';
-
 // Assets
 import cafe from '../../assets/images/admPage/cafezinho.png';
 import lixeira from '../../assets/images/admPage/lixeira.png';

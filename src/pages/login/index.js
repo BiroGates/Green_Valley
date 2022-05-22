@@ -19,7 +19,7 @@ export default function LoginPage() {
             <div className="login-form">
                 <div className="input-text"> <input type="text" value="" /> </div>
                 <div className="input-text"> <input type="password" value="" /> </div>
-                <Link to='/admpagehome'><div class="login-btn"> LOGIN </div></Link>
+                <Link to='/adm'><div class="login-btn"> LOGIN </div></Link>
             </div>
         </div>
     </div>
