@@ -2,8 +2,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Landying Page
-import LandyingPage from './pages/ladyingPage'
-import Menu from './pages/menuPage'
+import LandyingPage from './pages/user/ladyingPage'
+import Menu from './pages/user/menuPage'
 
 // Admin
 import Home from './pages/admin/home'

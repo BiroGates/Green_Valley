@@ -7,42 +7,42 @@ import { useState, useEffect } from 'react'
 
 // S'Css
 import './index.scss'
-import '../../assets/common/common.css'
+import '../../../assets/common/common.css'
 
 // Images
 // Nav Bar
-import logoNav from '../../assets/images/landyingPage/unknown.png'
+import logoNav from     '../../../assets/images/landyingPage/unknown.png'
 // fx-one
-import heroCoffer from '../../assets/images/landyingPage/unknown (1).png'
+import heroCoffer from  '../../../assets/images/landyingPage/unknown (1).png'
 // fx-two
-import croasaint from '../../assets/images/landyingPage/cro.png'
-import torta from '../../assets/images/landyingPage/torta.png'
-import cafe from "../../assets/images/landyingPage/cafe.png"
+import croasaint from   '../../../assets/images/landyingPage/cro.png'
+import torta from       '../../../assets/images/landyingPage/torta.png'
+import cafe from        "../../../assets/images/landyingPage/cafe.png"
 // fx-three
-import grao from '../../assets/images/landyingPage/unknown (2).png'
-import iconCafe from "../../assets/images/landyingPage/unknown (3).png"
-import bolo from "../../assets/images/landyingPage/unknown (4).png"
+import grao from        '../../../assets/images/landyingPage/unknown (2).png'
+import iconCafe from    "../../../assets/images/landyingPage/unknown (3).png"
+import bolo from        "../../../assets/images/landyingPage/unknown (4).png"
 
 // fx-four
-import row_img_1 from "../../assets/images/landyingPage/unknown (5).png"
-import row_img_2 from "../../assets/images/landyingPage/unknown (6).png"
-import row_img_3 from "../../assets/images/landyingPage/unknown (7).png"
+import row_img_1 from "../../../assets/images/landyingPage/unknown (5).png"
+import row_img_2 from "../../../assets/images/landyingPage/unknown (6).png"
+import row_img_3 from "../../../assets/images/landyingPage/unknown (7).png"
 
-import row_img_4 from "../../assets/images/landyingPage/unknown (8).png" 
-import row_img_5 from "../../assets/images/landyingPage/unknown (9).png" 
-import row_img_6 from "../../assets/images/landyingPage/unknown (10).png"
+import row_img_4 from "../../../assets/images/landyingPage/unknown (8).png" 
+import row_img_5 from "../../../assets/images/landyingPage/unknown (9).png" 
+import row_img_6 from "../../../assets/images/landyingPage/unknown (10).png"
 
-import row_img_7 from "../../assets/images/landyingPage/unknown (11).png"
-import row_img_8 from "../../assets/images/landyingPage/unknown (12).png"
-import row_img_9 from "../../assets/images/landyingPage/unknown (13).png"
+import row_img_7 from "../../../assets/images/landyingPage/unknown (11).png"
+import row_img_8 from "../../../assets/images/landyingPage/unknown (12).png"
+import row_img_9 from "../../../assets/images/landyingPage/unknown (13).png"
 
-import grao_flutuante from "../../assets/images/landyingPage/GraoCafe.png"
+import grao_flutuante from "../../../assets/images/landyingPage/GraoCafe.png"
 
-import logo_G from "../../assets/images/landyingPage/logo-G.svg"
+import logo_G from "../../../assets/images/landyingPage/logo-G.svg"
 
 //fx-five
-import mapa from '../../assets/images/landyingPage/mapa.png'
-import ping_img from "../../assets/images/landyingPage/icone.png"
+import mapa from '../../../assets/images/landyingPage/mapa.png'
+import ping_img from "../../../assets/images/landyingPage/icone.png"
 
 
 

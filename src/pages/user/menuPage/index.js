@@ -1,7 +1,7 @@
 import './index.scss'
-import '../../assets/common/common.css'
+import '../../../assets/common/common.css'
 
-import Produtos from '../../components/Produto'
+import Produtos from '../../../components/Produto'
 
 
 
