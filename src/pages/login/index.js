@@ -1,6 +1,4 @@
 import React from 'react'
-
-import '../../assets/common/common.css'
 import  './index.scss'
 
 import { Link } from 'react-router-dom';
@@ -19,8 +17,8 @@ export default function LoginPage() {
             <div className="logo"><img src={ logo } alt=""/></div>
             <div className="vertical-bar"></div>
             <div className="login-form">
-                <div className="input-text"> <input type="text" placeholder='Email' value="" /> </div>
-                <div className="input-text"> <input type="password" placeholder='Senha' value="" /> </div>
+                <div className="input-text"> <input type="text" value="" /> </div>
+                <div className="input-text"> <input type="password" value="" /> </div>
                 <Link to='/adm'><div class="login-btn"> LOGIN </div></Link>
             </div>
         </div>
