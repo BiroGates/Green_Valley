@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import './index.scss';
 
 export default function Adicionar() {
+    const [formData, setFormData] = useState({
+        nm_produto: '',
+        nr_preco: '',
+        ds_produto: '',
+        nm_categoria: 'bebidas'
+      })
+    
     return (
-        <div>
+        <main className='adicionar-page'>
             <div className='addprodutos'>
                 <div className='add-container'>
                     <div className='add-img'></div>
@@ -34,6 +43,6 @@ export default function Adicionar() {
 
                 </div>
             </div>
-        </div>
+        </main>
     )
 }

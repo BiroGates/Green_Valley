@@ -8,6 +8,7 @@ import Menu from './pages/menuPage'
 // Admin
 import Home from './pages/admin/home'
 import Cardapio from './pages/admin/cardapio'
+import Adicionar from './pages/admin/adicionar'
 
 import LoginPage from './pages/login/index'
 
