@@ -3,8 +3,8 @@ import  './index.scss'
 
 import { Link } from 'react-router-dom';
 
-import graoCafe from '../../assets/images/landyingPage/GraoCafe.png'
-import logo from '../../assets/images/landyingPage/Logo.png'
+import graoCafe from '../../../assets/images/landyingPage/GraoCafe.png'
+import logo from '../../../assets/images/landyingPage/Logo.png'
 
 export default function LoginPage() {
   return (
@@ -17,9 +17,9 @@ export default function LoginPage() {
             <div className="logo"><img src={ logo } alt=""/></div>
             <div className="vertical-bar"></div>
             <div className="login-form">
-                <div className="input-text"> <input type="text" value="" /> </div>
-                <div className="input-text"> <input type="password" value="" /> </div>
-                <Link to='/adm'><div class="login-btn"> LOGIN </div></Link>
+                <div className="input-text"> <input type="text" placeholder='Ex: teste@teste.com.br' value="" /> </div>
+                <div className="input-text"> <input type="password" placeholder='******' value="" /> </div>
+                <Link to='/admin'><div class="login-btn"> LOGIN </div></Link>
             </div>
         </div>
     </div>

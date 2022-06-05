@@ -9,8 +9,8 @@ import Menu from './pages/user/menuPage'
 import Home from './pages/admin/home'
 import Cardapio from './pages/admin/cardapio'
 import Adicionar from './pages/admin/adicionar'
+import LoginPage from './pages/admin/login/index'
 
-import LoginPage from './pages/login/index'
 
 
 
