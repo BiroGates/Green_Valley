@@ -189,6 +189,7 @@
       border: black solid 1px;
       width: 24em;
       margin-bottom: 2.5em;
+      margin-top: -5em;
   
     }
     
@@ -254,8 +255,10 @@
     }
     
     img{
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: auto; 
+      margin-left: 5em;
+      margin-top: -10em;
     }
     
     .grao-1, .grao-2, .grao-3, .grao-4{

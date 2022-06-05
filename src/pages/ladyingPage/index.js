@@ -1,4 +1,4 @@
-import { motion, useViewportScroll, useTransform }from 'framer-motion'
+    import { motion, useViewportScroll, useTransform }from 'framer-motion'
 
 import { Link } from 'react-router-dom'
 
@@ -37,6 +37,8 @@ import row_img_8 from "../../assets/images/landyingPage/unknown (12).png"
 import row_img_9 from "../../assets/images/landyingPage/unknown (13).png"
 
 import grao_flutuante from "../../assets/images/landyingPage/GraoCafe.png"
+
+import logo_G from "../../assets/images/landyingPage/logo-G.svg"
 
 //fx-five
 import mapa from '../../assets/images/landyingPage/mapa.png'
@@ -284,6 +286,10 @@ export default function LandyingPage() {
 
                     <div className="nacionalidade">
                         <p>Português do Brasil</p>
+                    </div>
+                    
+                    <div className="rodape-imagem29">
+                        <img src={logo_G} />
                     </div>
                 </div>
                 <div className="rodape-esquerda">
