@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
+// Css
 import './index.scss';
+
+// Components
+import LeftBar from '../../../components/AdmPage/Leftbar'
 
 export default function Adicionar() {
     const [formData, setFormData] = useState({
@@ -12,6 +16,7 @@ export default function Adicionar() {
     
     return (
         <main className='adicionar-page'>
+            <LeftBar/>
             <div className='addprodutos'>
                 <div className='add-container'>
                     <div className='add-img'></div>

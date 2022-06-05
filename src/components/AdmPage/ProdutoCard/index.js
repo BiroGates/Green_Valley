@@ -10,7 +10,7 @@ import cafe from '../../assets/images/admPage/cafezinho.png';
 import lixeira from '../../assets/images/admPage/lixeira.png';
 
 // Api
-import Api from '../../services/Api'
+import Api from '../../../services/Api'
 const api = new Api();
 
 

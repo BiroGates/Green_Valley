@@ -24,6 +24,7 @@ export default function Paths() {
             <Route  exact path="/menu" element={<Menu />}></Route>
             <Route  exact path="/admin" element={<Home />}></Route>
             <Route  exact path="/admin/cardapio" element={<Cardapio />}></Route>
+            <Route  exact path="/admin/adicionar" element={<Adicionar />}></Route>
         </Routes>
     </BrowserRouter>
   )
