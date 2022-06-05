@@ -5,9 +5,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 // Componenets
-import AdmProduto from '../../components/AdmProduto/index';
-import MenuOption from '../../components/AdmPage/MenuOption/index';
-import ConfirmBox from '../../components/AdmPage/ConfirmBox';
+import AdmProduto from '../../../components/AdmProduto/index';
+import MenuOption from '../../../components/AdmPage/MenuOption/index';
+import ConfirmBox from '../../../components/AdmPage/ConfirmBox';
 
 // Style Componenets
 import { StyledAdminPage } from './styled';
@@ -26,7 +26,7 @@ import menu_hamburger from '../../assets/images/admPage/menuzinho.png'
 import menu_plus from '../../assets/images/admPage/mais.png'
 
 // Api
-import Api from '../../services/Api'
+import Api from '../../../services/Api'
 const api = new Api();
 
 
