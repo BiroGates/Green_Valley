@@ -11,68 +11,6 @@ const StyledAdminPage = styled.div`
     width: 100%;
     height: auto;
 
-
-    .left-bar{
-        width: 400px;
-        height: auto;
-
-        min-height: 100vh;
-
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-    
-        background-color: #007900 ;
-    }
-
-    .info-container{
-        width: 100%;
-        height: 350px;
-
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .info-img{
-        width: 180px;
-        height: 180px;
-    }
-
-    .info-img img{
-        width: 100%;
-        height: 100%;
-    }
-
-    .info-user{
-        width: 100%;
-        height: auto;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-
-        font-family: 'medio';
-        font-size: 1.5em;
-        color: white;
-    
-    }
-
-    .option-container{
-        width: 100%;
-        height: auto ;
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-
-    }
-
     .home{
         width: 70%;
         height: auto;
@@ -127,85 +65,9 @@ const StyledAdminPage = styled.div`
         outline: none;
     }
 
-    .cardapio{
-        width: 70%;
-        height: auto;
-        
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .src-bar{
-        width: 60%;
-        height: 150px;
-       
-        margin-top: 50px;
-        margin-bottom: 50px;
-
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
     
-    }
 
-    .titulo{
-        width: 100%;
-        height: auto;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        
-        font-family: 'medio';
-        font-size: 2em;
-        
-    }
-
-    .bar{
-        width: 100%;
-        height: 50px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-
-    }
-
-    .bar input{
-        width: 100%;
-        height: 100%;
-
-        border: none;
-        border-radius: 30px;
-
-        background-color: rgba(196, 196, 196, 0.43);;
-
-        font-size: 1.3em;
-        font-family: 'regular';
-
-
-        padding-left: 20px ;
-    }
-
-    .bar input:focus{
-        outline: none;
-    }
-
-    .products{
-        width: 60%;
-        height: auto;
     
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
     .addprodutos{
         width: 70%;
         height: 100vh;

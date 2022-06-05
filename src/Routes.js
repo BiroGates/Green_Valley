@@ -7,6 +7,7 @@ import Menu from './pages/menuPage'
 
 // Admin
 import Home from './pages/admin/home'
+import Cardapio from './pages/admin/cardapio'
 
 import LoginPage from './pages/login/index'
 
@@ -21,6 +22,7 @@ export default function Paths() {
             <Route exact path="/login" element={<LoginPage />}></Route>
             <Route  exact path="/menu" element={<Menu />}></Route>
             <Route  exact path="/admin" element={<Home />}></Route>
+            <Route  exact path="/admin/cardapio" element={<Cardapio />}></Route>
         </Routes>
     </BrowserRouter>
   )
