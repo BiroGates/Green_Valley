@@ -53,8 +53,12 @@
     background-color:#D07718 ;
 }
 
+.filter-buttons .btn:hover{
+    cursor: pointer;
+}
+
 .produtos-container {
-    width: 77%;
+    width: 80%;
     height: auto;
 
     display: flex;
@@ -63,6 +67,8 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 @media ( max-width:480px ){

@@ -14,10 +14,12 @@ const StyledProdutos = styled.div `
         flex-direction: column;
 
         background-color: white;
+        
+        padding: 10px;
+        margin-bottom: 10px;
 
-        margin-top: 80px;
         border-radius: 30px;
-    
+
         font-family: 'medio';
     }
 
