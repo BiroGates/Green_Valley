@@ -11,7 +11,7 @@ import lixeira from '../../../assets/images/admPage/lixeira.png';
 
 
 
-export default function AdmProduto({ nome, desc, preco, id, setReRender, reRender }) {
+export default function AdmProduto({ nome, desc, preco, id}) {
 
     return (
     <StyleAdmProduto>

@@ -7,17 +7,31 @@ import LeftBar from '../../../components/AdmPage/Leftbar'
 import AdmProduto from '../../../components/AdmPage/ProdutoCard';
 
 // Api
-import listarTodosOsProdutos from '../../../api/produtoApi';
+import { listarTodosOsProdutos, buscarPorNome } from '../../../api/produtoApi';
 
 
 
 export default function Cardapio() {
-    const[produtos, setProdutos] = useState([0,1,2,4]);
+    const[produtos, setProdutos] = useState([]);
+    const[inputValue, setInputValue] = useState('');
 
-    async function getData (){
+    let canLoad = false;
+
+    async function carregarTodosOsProdutos (){
         const resp = await listarTodosOsProdutos();
         setProdutos(resp);  
     }
+
+    async function buscarProdutoPorNome() {
+      const resp = await buscarPorNome(inputValue);
+      setProdutos(resp);
+    }
+        
+      useEffect(()=>{
+      carregarTodosOsProdutos();
+    },[])
+
+    console.log('RENDERED');
 
     return (
       <main className='cardapio-page'>
@@ -32,12 +46,17 @@ export default function Cardapio() {
           <div className='cardapio'>
               <div className='src-bar'>
                 <div className='titulo'> CARDAPIO </div>
-                <div className='bar'> <input type="text" /></div>
-                <div className='bar-btn'> BUSCAR </div>
+                <div className='bar'> <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
+                <div className='bar-btn' onClick={buscarProdutoPorNome}> BUSCAR </div>
               </div>
               <div className='products'>
                   {produtos.map(item =>{
-                    return <AdmProduto/>
+                    return <AdmProduto
+                            nome = {item.nome} 
+                            desc ={item.descricao}
+                            preco= {item.preco}
+                            id={item.id_produto}
+                            />
                   })}
               </div>
           </div>
