@@ -21,9 +21,7 @@ export default function LeftBar() {
             <div className='info-user'> ADMIN@ADMIN </div>
           </div>
           <div className='option-container'>
-            <MenuOptions text="Home" icon={menu_home} link="/admin"/>
-            <MenuOptions text="Cardapio" icon={menu_hamburger} link="/admin/cardapio"/>
-            <MenuOptions text="Adicionar" icon={menu_plus} link="/admin/adicionar"/>
+          
           </div>
         </div>
     </main>
