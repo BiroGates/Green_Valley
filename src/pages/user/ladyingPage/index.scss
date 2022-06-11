@@ -487,3 +487,26 @@
         left: 570px;
     }
 }
+
+@media(max-width:480px){
+    .main{
+        .hidden{
+            visibility: hidden;
+        }
+
+        .one-nav img{
+            position: absolute;
+            top:165px;
+            right:21em;
+            width: 130px;
+        }
+
+        .one-nav-button{
+            padding: 1px 13px;
+        }
+
+        .butao {
+            font-size: 5px;
+        }
+    }
+}

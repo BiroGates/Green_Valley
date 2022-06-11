@@ -82,11 +82,11 @@ export default function LandyingPage() {
                 <div className="one-nav-width">
                     <div className="one-nav-text">
                         <img src={logoNav} alt=""/>
-                        <Link to='/'>HOME</Link>
-                        <Link to='/menu'>MENU</Link>
+                        <Link className='hidden' to='/'>HOME</Link>
+                        <Link className='hidden' to='/menu'>MENU</Link>
                     </div>
                     <div className="one-nav-button">
-                        <Link to="/login">ADMINISTRAÇÃO</Link>
+                        <Link className='butao' to="/login">ADMINISTRAÇÃO</Link>
                     </div>
                 </div>
             </div>
