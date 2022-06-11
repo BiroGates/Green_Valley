@@ -7,7 +7,14 @@ import LeftBar from '../../../components/AdmPage/Leftbar'
 export default function Cardapio() {
   return (
     <main className='cardapio-page'>
-        <LeftBar/>
+        <div className='not-responsive-green-bar'>
+          <LeftBar/>
+        </div>
+        <div className='responsive-green-bar'>
+          <div className='resposive-home'></div>
+          <div className='resposive-adicionar'></div>
+          <div className='resposive-consultar'></div>
+        </div>
         <div className='cardapio'>
             <div className='src-bar'>
             <div className='titulo'> CARDAPIO </div>
