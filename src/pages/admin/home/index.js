@@ -29,10 +29,19 @@ import menu_plus from '../../../assets/images/admPage/mais.png'
 export default function Home() {
   return (
     <main className='home-main'>
-        <LeftBar/>
+        <div className='not-responsive-green-bar'>
+          <LeftBar/>
+        </div>
+        <div className='responsive-green-bar'>
+          <div className='resposive-home'></div>
+          <div className='resposive-adicionar'></div>
+          <div className='resposive-consultar'></div>
+        </div>
         <div className='home'>
             <div className='change-img'>
-              <div className='info-img'> <img src={user_icon_black} alt="" /> </div>
+              <div className='info-img'>
+                 <img src={user_icon_black} alt="" />
+              </div>
               <div className='inputs'>
                 <label> NOME: </label>
                 <input type="text" />
