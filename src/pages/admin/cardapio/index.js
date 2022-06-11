@@ -4,6 +4,8 @@ import './index.scss'
 
 import LeftBar from '../../../components/AdmPage/Leftbar'
 
+import lupa from '../../../assets/images/admPage/lupa.png'
+
 export default function Cardapio() {
   return (
     <main className='cardapio-page'>
@@ -17,8 +19,9 @@ export default function Cardapio() {
         </div>
         <div className='cardapio'>
             <div className='src-bar'>
-            <div className='titulo'> CARDAPIO </div>
-            <div className='bar'> <input type="text" /> </div>
+              <div className='titulo'> CARDAPIO </div>
+              <div className='bar'> <input type="text" /></div>
+              <div className='bar-btn'> BUSCAR </div>
             </div>
             <div className='products'>
             

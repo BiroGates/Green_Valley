@@ -22,7 +22,7 @@
     
     .src-bar{
         width: 60%;
-        height: 150px;
+        height: auto;
        
         margin-top: 50px;
         margin-bottom: 50px;
@@ -89,9 +89,26 @@
         flex-direction: column;
     }
 
+    .bar-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 20px;
+
+        font-family: 'medio';
+        color: white;
+
+        padding: 10px 25px;
+
+        border-radius: 15px;
+
+        background-color: #007900;
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     .cardapio-page{
         box-sizing: border-box;
         padding: 0;
@@ -115,7 +132,7 @@
         }
         
         .src-bar{
-            width: 60%;
+            width: 400px;
             height: 150px;
            
             margin-top: 50px;
@@ -162,7 +179,7 @@
         
             background-color: rgba(196, 196, 196, 0.43);;
         
-            font-size: 1.3em;
+            font-size: 1em;
             font-family: 'regular';
         
         
