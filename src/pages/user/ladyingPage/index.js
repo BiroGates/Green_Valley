@@ -1,4 +1,4 @@
-    import { motion, useViewportScroll, useTransform }from 'framer-motion'
+import { motion, useViewportScroll, useTransform }from 'framer-motion'
 
 import { Link } from 'react-router-dom'
 

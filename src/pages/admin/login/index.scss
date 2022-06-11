@@ -154,133 +154,132 @@
 }
 @media (max-width:480px) {
    
+  .main-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    position: relative;
+    overflow: hidden;
+  
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  
+    width: 70%;
+    height: 500px;
+  }
+  
+  .logo{
+    width: 700px;
+    height: 700px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vertical-bar{
+    border: black solid 1px;
+    width: 24em;
+    margin-bottom: 2.5em;
+    margin-top: -5em;
 
-    .main{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    
-      position: relative;
-      overflow: hidden;
-    
-      width: 100vw;
-      height: 100vh;
-    }
-    
-    .container{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-    
-      width: 70%;
-      height: 500px;
-    }
-    
-    .logo{
-      width: 700px;
-      height: 700px;
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .vertical-bar{
-      border: black solid 1px;
-      width: 24em;
-      margin-bottom: 2.5em;
-      margin-top: -5em;
+  }
   
-    }
+  .login-form{
+    width: auto;
+    height: 500px;
     
-    .login-form{
-      width: auto;
-      height: 500px;
-      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    
-    }
-    
-    .login-form > *{
-      margin-bottom: 2em;
-    }
-    
-    .login-form .input-text input{
-      width: 300px;
-      height: 28px;
-      
-      border: inherit;
-      border-radius: 5em;
-    
-      padding: 10px 0px 15px 30px;
-    
-      font-size: 1em;
-    
-      background-color: #BDD3BD;
-    
-      transition: .4s;
-    }
-    .login-form .input-text input:hover{
-      background-color: #6c9b6c;
-    }
-    
-    .login-form .input-text input:focus{
-      outline: none;
-    }
-    
-    .login-btn{
-      width: 300px;
-      height: 28px;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-    
-      background-color: #522611;
-    
-      font-size: 0.9em;
-      font-family: 'poppins';
-      color: white;
-    
-      border: inherit;
-      border-radius: 5em;
-    }
-    
-    .login-btn:hover{
-      cursor: pointer;
-    }
-    
-    img{
-      width: 80%;
-      height: auto; 
-      margin-left: 5em;
-      margin-top: -10em;
-    }
-    
-    .grao-1, .grao-2, .grao-3, .grao-4{
-      position: absolute;
-    }
-    
-    .grao-1{
-      display: none;
-    }
-    
-    .grao-2{
-    display: none;
-    }
-    
-    .grao-3{  
-     display:none;
-    }
-    
-    .grao-4{
-    display: none;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   
-   }
+  }
+  
+  .login-form > *{
+    margin-bottom: 2em;
+  }
+  
+  .login-form .input-text input{
+    width: 300px;
+    height: 28px;
+    
+    border: inherit;
+    border-radius: 5em;
+  
+    padding: 10px 0px 15px 30px;
+  
+    font-size: 1em;
+  
+    background-color: #BDD3BD;
+  
+    transition: .4s;
+  }
+  .login-form .input-text input:hover{
+    background-color: #6c9b6c;
+  }
+  
+  .login-form .input-text input:focus{
+    outline: none;
+  }
+  
+  .login-btn{
+    width: 300px;
+    height: 28px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  
+    background-color: #522611;
+  
+    font-size: 0.9em;
+    font-family: 'poppins';
+    color: white;
+  
+    border: inherit;
+    border-radius: 5em;
+  }
+  
+  .login-btn:hover{
+    cursor: pointer;
+  }
+  
+  img{
+    width: 80%;
+    height: auto; 
+    margin-left: 5em;
+    margin-top: -10em;
+  }
+  
+  .grao-1, .grao-2, .grao-3, .grao-4{
+    position: absolute;
+  }
+  
+  .grao-1{
+    display: none;
+  }
+  
+  .grao-2{
+  display: none;
+  }
+  
+  .grao-3{  
+   display:none;
+  }
+  
+  .grao-4{
+  display: none;
+  }
+
+}
