@@ -10,6 +10,31 @@
     width: 100%;
     height: auto;
 
+
+    .upload-imagem{
+        width: 100%;
+        height: 550px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .upload-imagem .real-image{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .upload-imagem:hover{
+        cursor: pointer;
+    }
+
+    .upload-imagem input{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    
     .addprodutos{
         width: 70%;
         height: 100vh;

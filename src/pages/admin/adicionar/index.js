@@ -6,13 +6,26 @@ import './index.scss';
 // Components
 import LeftBar from '../../../components/AdmPage/Leftbar'
 
+// Assets
+import upload from '../../../assets/images/admPage/upload.png'
+
 export default function Adicionar() {
     const [formData, setFormData] = useState({
         nm_produto: '',
         nr_preco: '',
         ds_produto: '',
         nm_categoria: 'bebidas'
-      })
+    })
+
+    const [imagem, setImagem] = useState('');
+
+    function alterarImagem() {
+        document.getElementById('upload-imagem').click();
+    }
+
+    function mostrarImagem(imagem) {
+        return URL.createObjectURL(imagem);
+    }
     
     return (
         <main className='adicionar-page'>
@@ -20,8 +33,14 @@ export default function Adicionar() {
             <div className='addprodutos'>
                 <div className='add-container'>
                     
-                    <div className='upload-imagem'>
-                        img
+                    <div className='upload-imagem' onClick={alterarImagem}>
+                        <input type="file" id="upload-imagem" onChange={e => setImagem(e.target.files[0])} />
+                        {imagem && 
+                            <img className='real-image' src={mostrarImagem(imagem)} alt="" />
+                        }
+                        {!imagem && 
+                            <img src={upload} alt="" />
+                        }
                     </div>
 
                     <form className='add-form' >
