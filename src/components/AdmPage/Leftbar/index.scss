@@ -34,7 +34,7 @@
     }
 
     .info-img{
-        width: 150;
+        width: 150px;
         height: 150px;
     }
 
@@ -68,5 +68,37 @@
         flex-direction: column;
 
 
+    }
+}
+
+@media (max-width:480px) {
+    .green-bar{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+
+        .left-bar{
+            width: 100%;
+            height: 80px;
+
+            min-height: 0px;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        
+            background-color: #007900 ;
+        }
+
+        .info-container{
+            display: none;
+        }
+        
     }
 }

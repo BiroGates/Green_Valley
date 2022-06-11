@@ -14,6 +14,7 @@ import LeftBar from '../../../components/AdmPage/Leftbar';
 
 // Css
 import '../../../assets/common/common.css';
+import './index.scss';
 
 
 // Assets
@@ -26,16 +27,8 @@ import menu_plus from '../../../assets/images/admPage/mais.png'
 
 
 export default function Home() {
-  // Form Data
-  const [formData, setFormData] = useState({
-    nm_produto: '',
-    nr_preco: '',
-    ds_produto: '',
-    nm_categoria: 'bebidas'
-  })
-
   return (
-    <StyledAdminPage>
+    <main className='home-main'>
         <LeftBar/>
         <div className='home'>
             <div className='change-img'>
@@ -50,6 +43,6 @@ export default function Home() {
               </div>
             </div>
         </div>  
-    </StyledAdminPage>
+    </main>
   )
 }
