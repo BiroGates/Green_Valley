@@ -12,6 +12,7 @@
         background-color: #ffcc80;
         height: 600px;
     }
+
     .one-nav {
         display: flex;
         flex-direction: row;
@@ -61,6 +62,7 @@
         align-items: center;
         height: 500px;
     }
+
     .one-hero-text {
         display: flex;
         flex-direction: column;
@@ -108,6 +110,7 @@
         width: 100%;
         height: 600px;
     }
+
     .fx-two-hero {
         display: flex;
         flex-direction: row;
@@ -176,7 +179,7 @@
         letter-spacing: 1px;
         color: #ffffff;
     }
-    
+
     .fx-three {
         display: flex;
         flex-direction: row;
@@ -185,7 +188,8 @@
         height: 600px;
         background-color: #ffcc80;
 
-    }        
+    }
+
     .three-hero {
         display: flex;
         flex-direction: row;
@@ -198,9 +202,25 @@
         width: 70px;
     }
 
-    .three-hero-ingredientes,
-    .three-hero-entrega,
     .three-hero-bolo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        width: 295px;
+    }
+
+    .three-hero-ingredientes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        width: 295px;
+    }
+
+    .three-hero-entrega {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -222,7 +242,7 @@
         font-family: 'regular';
         font-size: 13px;
     }
- 
+
     .fx-four {
         display: flex;
         flex-direction: column;
@@ -230,8 +250,9 @@
         align-items: center;
         text-align: start;
         height: 800px;
-       bottom: 300px;
+        bottom: 300px;
     }
+
     .fx-four-hero {
         position: relative;
         bottom: 50px;
@@ -340,6 +361,7 @@
         background-color: #603601;
         height: 500px;
     }
+
     .fx-five-title {
         font-family: 'regular';
         font-size: 25px;
@@ -410,6 +432,7 @@
         height: 500px;
         background-color: #ffcc80;
     }
+
     .rodape-hero {
         display: flex;
         flex-direction: row;
@@ -488,25 +511,229 @@
     }
 }
 
-@media(max-width:480px){
-    .main{
-        .hidden{
+@media(max-width:480px) {
+    .main {
+        overflow-x: hidden;
+        .hidden {
             visibility: hidden;
         }
 
-        .one-nav img{
+        .one-nav img {
             position: absolute;
-            top:165px;
-            right:21em;
+            top: 165px;
+            right: 21em;
             width: 130px;
         }
 
-        .one-nav-button{
+        .one-nav-button {
             padding: 1px 13px;
         }
 
         .butao {
             font-size: 5px;
         }
+
+
+        .one-hero-text {
+            flex-direction: column;
+            width: 250px;
+        }
+
+        .one-hero-text h1 {
+            font-size: 16px;
+        }
+
+        .one-hero-text p {
+            font-size: 12px;
+        }
+
+        .fx-one {
+            height: 750px;
+        }
+
+        .one-hero-image img {
+            position: absolute;
+            top: 350px;
+            right: 120px;
+            width: 200px;
+        }
+
+        .fx-two {
+            height: 600px;
+        }
+
+        .fx-two-hero {
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .cro img {
+            width: 90px;
+        }
+
+        .cafe img {
+
+            width: 125px;
+        }
+
+        .cafe {
+            position: absolute;
+            right: 120px;
+            top: 62em;
+            height: 20px;
+        }
+
+        .cro {
+            position: absolute;
+            top: 62em;
+            right: 260px;
+        }
+
+        .two-hero-text h1 {
+            font-size: 18px;
+        }
+
+        .two-hero-text p {
+            font-size: 15px;
+        }
+
+        .two-hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 250px;
+            width: 390px;
+        }
+
+        .fx-three {
+            height: 800px;
+        }
+
+        .three-hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 800px;
+
+        }
+
+        .three-hero-ingredientes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: auto;
+            height: 250px;
+        }
+
+
+
+        .three-hero-entrega {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 340px;
+            height: 250px;
+        }
+
+        .three-hero-bolo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 341px;
+            height: 250px;
+        }
+
+        .three-hero h1 {
+            font-size: 18px;
+        }
+
+        .three-hero p {
+            font-size: 15px;
+        }
+
+        .three-hero img {
+            position: absolute;
+            top: 12.6em;
+            right: 8.5em;
+            width: 65px;
+        }
+        .fx-four{
+            height: 700px;
+    
+        }
+
+        .fx-four-hero{
+            height: 500px;
+        }
+
+        .fx-four-text h1 {
+            font-size: 18px;
+        }
+
+        .fx-four-text p {
+            font-size: 14px;
+        }
+
+        .fx-four-images {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 220px;
+            width: 150px;
+
+        }
+
+        .fx-four-images img {
+            width:85px;
+            height: min-content;
+        }
+
+        .fx-four-coffee,
+        .fx-four-coffee2,
+        .fx-four-coffee3 {
+            position: fixed;
+            visibility: hidden;
+        }
+        
+        .linha-1 {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            width: 320px;
+    
+            position: relative;
+            top: 50px;
+        }
+    
+        .linha-2 {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            width: 320px;
+            
+            position:relative;
+            top: 60px;
+        }
+    
+        .linha-3 {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            width: 320px;
+            
+            position: relative;
+            top: 25px;
+        }
+        
     }
 }

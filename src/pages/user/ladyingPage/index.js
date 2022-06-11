@@ -130,7 +130,7 @@ export default function LandyingPage() {
                         <img src={ croasaint }alt=""/>
                     </motion.div>
                     <motion.div 
-                        class="cafe"
+                        className="cafe"
                         initial={{scale: 1}}
                         transition={{duration: .3}}
                         whileHover={{scale: 1.05}}
@@ -141,7 +141,7 @@ export default function LandyingPage() {
                 </div>
                 <div className="two-hero-text">
                     <h1>PRINCIPAIS PEDIDOS</h1>
-                    <p>Café, croissant, sonho, não importa oque peça temos certeza que vai sair daqui com um gostinho
+                    <p>Café, croissant, sonho, não importa o que peça temos certeza que vai sair daqui com um gostinho
                         de quero mais, alguns dos nossos principais pedidos que fazem jus ao nome GREEN VALLEY
                     </p>
 
@@ -227,21 +227,21 @@ export default function LandyingPage() {
                     </div>
                     <div className="fx-four-images">
                         <div className="linha-1">
-                            <img src={row_img_1} alt=""/>
-                            <img src={row_img_2} alt=""/>
-                            <img src={row_img_3} alt=""/>
+                            <img className='one' src={row_img_1} alt=""/>
+                            <img className='two' src={row_img_2} alt=""/>
+                            <img className='three' src={row_img_3} alt=""/>
                         </div>
 
                         <div className="linha-2">
-                            <img src={row_img_4}alt=""/>
-                            <img src={row_img_5} alt=""/>
-                            <img src={row_img_6} alt=""/>
+                            <img className='for' src={row_img_4}alt=""/>
+                            <img className='five' src={row_img_5} alt=""/>
+                            <img className='six' src={row_img_6} alt=""/>
                         </div>
 
                         <div className="linha-3">
-                            <img src={row_img_7 } alt=""/>
-                            <img src={row_img_8} alt=""/>
-                            <img src={row_img_9 } alt=""/>
+                            <img className='seven' src={row_img_7 } alt=""/>
+                            <img className='oito' src={row_img_8} alt=""/>
+                            <img className='nine' src={row_img_9 } alt=""/>
                         </div>
 
                         <div className="fx-four-coffee">
