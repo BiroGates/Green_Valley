@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import {useParams} from 'react-router-dom'
 
-//APi
-import { alterarProduto, enviarImagem, enviarProduto, pegarImagem } from '../../../api/produtoApi';
+//Api
+import { alterarProduto, buscarPorId, enviarImagem, enviarProduto, pegarImagem } from '../../../api/produtoApi';
 
 // Css
 import './index.scss';
 import { toast } from 'react-toastify';
+
+// Navigate
+import { useNavigate } from 'react-router-dom';
 
 // Components
 import LeftBar from '../../../components/AdmPage/Leftbar'
 
 // Assets
 import upload from '../../../assets/images/admPage/upload.png'
+import user from '../../../assets/images/admPage/user_icon.png'
 
 export default function Adicionar() {
     const [nome, setNome] = useState('');
@@ -21,8 +26,11 @@ export default function Adicionar() {
    
     
     const [id, setId] = useState(0);
+    const {idParam} = useParams();
     const [imagem, setImagem] = useState('');
     
+    const navigate = useNavigate();
+
     async function salvarClick() {
         try{
             const funcionario = 1;
@@ -35,6 +43,7 @@ export default function Adicionar() {
                 
             }else{
                 const resp = await alterarProduto(nome, preco, descricao, categoria, id)
+                await enviarImagem(imagem, id);
                 toast.dark('Produto alterado com sucesso!');
                 
             }   
@@ -52,10 +61,11 @@ export default function Adicionar() {
         setNome('');
         setCategoria('bebidas')
         setDescricao('');
-        setPreco();
+        setPreco(0);
         
         setId(0);
         setImagem('');
+        navigate('/admin/adicionar')
     }
 
     function alterarImagem() {
@@ -66,10 +76,27 @@ export default function Adicionar() {
         if(typeof(imagem) == 'object'){
             return URL.createObjectURL(imagem);
         }else{
-            return pegarImagem(imagem);
+            return pegarImagem(imagem)
         }
     }
     
+    async function carregarProduto() {
+        const resposta = await buscarPorId(idParam)
+        setNome(resposta.nome);
+        setCategoria(resposta.categoria)
+        setDescricao(resposta.descricao);
+        setPreco(resposta.preco);
+        
+        setId(resposta.id);
+        setImagem(resposta.imagem);
+    }
+
+    useEffect(()=>{
+        if(idParam) {
+            carregarProduto();
+        }
+    },[])
+
     return (
         <main className='adicionar-page'>
             <div className='not-responsive-green-bar'>
@@ -103,7 +130,7 @@ export default function Adicionar() {
                             </div>
 
                             <div className='item-2'>
-                                <select value={categoria} onChange={(e) => setCategoria(e.target.value)}>
+                                <select onChange={(e) => setCategoria(e.target.value)}>
                                     <option> bebidas </option>
                                     <option> salgados </option>
                                     <option> doces  </option>
@@ -114,8 +141,10 @@ export default function Adicionar() {
                             <textarea placeholder='Ex: Sonho de doce de leite com flocos de coco' value={descricao} onChange={(e) => setDescricao(e.target.value)} ></textarea>
                         </div>
                     </form>
-                    <button className="btn" onClick={salvarClick}> {id == 0 ? 'SALVAR' : 'ALTERAR'} </button>
-                    <button className="btn" onClick={novoClick}> NOVO </button>
+                    <div className='botoes'>
+                        <button className="btn" onClick={salvarClick}> {id == 0 ? 'SALVAR' : 'ALTERAR'} </button>
+                        <button className="btn" onClick={novoClick}> NOVO </button>
+                    </div>
 
                 </div>
             </div>

@@ -25,9 +25,10 @@ export default function Cardapio() {
       setProdutos(resp);
     }
 
-      useEffect(()=>{
-        carregarTodosOsProdutos();
-      },[])
+
+    useEffect(()=>{
+      carregarTodosOsProdutos();
+    },[])
     return (
       <main className='cardapio-page'>
           <div className='not-responsive-green-bar'>
@@ -48,6 +49,7 @@ export default function Cardapio() {
                   {produtos ? produtos.map(item =>{
                     return <AdmProduto
                             key={item.id}
+                            carregarTodosOsProdutos={carregarTodosOsProdutos}
                             imagem={item.imagem}
                             nome = {item.nome} 
                             desc ={item.descricao}

@@ -8,16 +8,41 @@ import { StyleAdmProduto } from './styled'
 // Assets
 import cafe from '../../../assets/images/admPage/cafezinho.png';
 import lixeira from '../../../assets/images/admPage/lixeira.png';
-import { pegarImagem } from '../../../api/produtoApi';
+import { deletarProduto, pegarImagem } from '../../../api/produtoApi';
+import { confirmAlert } from 'react-confirm-alert';
+import { useNavigate } from 'react-router-dom'
 
-
-
-export default function AdmProduto({ nome, desc, preco, imagem, id}) {
+export default function AdmProduto({ nome, desc, preco, imagem, id, carregarTodosOsProdutos}) {
     const [realIamge, setRealImage] = useState();
     
+    const navigate = useNavigate();
+
+    async function editar() {
+        navigate(`/admin/alterar/${id}`)
+    }
+
     async function getUrl() {
-        const url = await pegarImagem(imagem);
+        const url =  pegarImagem(imagem);
         setRealImage(url);
+    }
+
+    async function removerProduto() {
+        confirmAlert({
+            title:'Remover Produto',
+            message: 'Tem certeza que deseja remover esse produto ?',
+            buttons:[
+                {
+                    label: 'SIM',
+                    onClick: async () => {
+                        const resp = await deletarProduto(id);
+                        carregarTodosOsProdutos();
+                    }
+                },
+                {
+                    label: 'NÃO'
+                }
+            ]
+        })
     }
     
     useEffect(() => {
@@ -35,8 +60,8 @@ export default function AdmProduto({ nome, desc, preco, imagem, id}) {
                 <div className='item-text-footer'>
                     <span className='price'> R$ { preco } </span>
                     <div className='edit'>
-                        <div className="edit-trash"> <img src={ lixeira } alt="lixeira"  /> </div>
-                        <div className='edit-btn'> EDIT </div>
+                        <div className="edit-trash" onClick={removerProduto}> <img src={ lixeira } alt="lixeira"  /> </div>
+                        <div className='edit-btn' onClick={editar}> EDIT </div>
                     </div>
                 </div>
             </div>

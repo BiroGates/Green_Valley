@@ -47,7 +47,16 @@ export async function enviarImagem(imagem, id) {
     return resposta.status;
 }
 
-export async function pegarImagem(imagem) {
-    console.log(`${api.getUri()}/${imagem}`);
+export function pegarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
+}
+
+export async function buscarPorId(id) {
+    const resposta = await api.get(`/produto/buscarid/${id}`);
+    return resposta.data;
+}
+
+export async function deletarProduto(id) {
+    const resposta = await api.delete(`/produto/delete/${id}`)
+    return resposta;
 }
