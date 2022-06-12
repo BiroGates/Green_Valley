@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Css
 import '../../../assets/common/common.css';
@@ -8,15 +8,27 @@ import { StyleAdmProduto } from './styled'
 // Assets
 import cafe from '../../../assets/images/admPage/cafezinho.png';
 import lixeira from '../../../assets/images/admPage/lixeira.png';
+import { pegarImagem } from '../../../api/produtoApi';
 
 
 
-export default function AdmProduto({ nome, desc, preco, id}) {
-
+export default function AdmProduto({ nome, desc, preco, imagem, id}) {
+    const [realIamge, setRealImage] = useState();
+    
+    async function getUrl() {
+        const url = await pegarImagem(imagem);
+        setRealImage(url);
+    }
+    
+    useEffect(() => {
+        getUrl();
+    },[])
     return (
     <StyleAdmProduto>
         <div className='item-container'>
-            <div className='item-img'> <img src={ cafe } alt="" /> </div>
+            <div className='item-img'> 
+                <img src={ realIamge } alt="Imagem dahora" /> 
+            </div>
             <div className='item-text'>
                 <div className='item-text-name'> { nome } </div>
                 <div className='item-text-desc'> { desc } </div>

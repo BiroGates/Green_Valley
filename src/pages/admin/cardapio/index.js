@@ -7,15 +7,13 @@ import LeftBar from '../../../components/AdmPage/Leftbar'
 import AdmProduto from '../../../components/AdmPage/ProdutoCard';
 
 // Api
-import { listarTodosOsProdutos, buscarPorNome } from '../../../api/produtoApi';
+import { listarTodosOsProdutos, buscarPorNome, pegarImagem } from '../../../api/produtoApi';
 
 
 
 export default function Cardapio() {
     const[produtos, setProdutos] = useState([]);
     const[inputValue, setInputValue] = useState('');
-
-    let canLoad = false;
 
     async function carregarTodosOsProdutos (){
         const resp = await listarTodosOsProdutos();
@@ -26,10 +24,10 @@ export default function Cardapio() {
       const resp = await buscarPorNome(inputValue);
       setProdutos(resp);
     }
-      useEffect(()=>{
-      carregarTodosOsProdutos();
-    },[])
 
+      useEffect(()=>{
+        carregarTodosOsProdutos();
+      },[])
     return (
       <main className='cardapio-page'>
           <div className='not-responsive-green-bar'>
@@ -44,18 +42,19 @@ export default function Cardapio() {
               <div className='src-bar'>
                 <div className='titulo'> CARDAPIO </div>
                 <div className='bar'> <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
-                <div className='bar-btn' onClick={buscarProdutoPorNome}> BUSCAR </div>
+                <div className='bar-btn' onClick={inputValue ? buscarProdutoPorNome : carregarTodosOsProdutos}> BUSCAR </div>
               </div>
               <div className='products'>
-                  {produtos.map(item =>{
+                  {produtos ? produtos.map(item =>{
                     return <AdmProduto
                             key={item.id}
+                            imagem={item.imagem}
                             nome = {item.nome} 
                             desc ={item.descricao}
                             preco= {item.preco}
-                            id={item.id_produto}
+                            id={item.id}
                             />
-                  })}
+                  }): ''}
               </div>
           </div>
       </main>

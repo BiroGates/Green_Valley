@@ -48,5 +48,6 @@ export async function enviarImagem(imagem, id) {
 }
 
 export async function pegarImagem(imagem) {
+    console.log(`${api.getUri()}/${imagem}`);
     return `${api.getUri()}/${imagem}`
 }

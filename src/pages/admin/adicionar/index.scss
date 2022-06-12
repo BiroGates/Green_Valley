@@ -262,10 +262,16 @@
             height: 900px;
         
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             flex-direction: column;
         }
+        .add-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
         .add-form .row-2{
             justify-content: center;
             align-items: center;

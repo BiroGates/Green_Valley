@@ -24,23 +24,18 @@ export default function Adicionar() {
     const [imagem, setImagem] = useState('');
     
     async function salvarClick() {
-        console.log(imagem);
-        console.log(nome);
-        console.log(preco);
-        console.log(descricao);
-        console.log(categoria);
-        
         try{
             const funcionario = 1;
+            if(!imagem) throw new Error('Por favor enviei uma imagem!');
             if(id == 0){
                 const resp = await enviarProduto(nome, preco, descricao, categoria, funcionario);
                 await enviarImagem(imagem, resp.insertedId);
                 setId(resp.insertedId);
-                toast.dark('Filme inserido com sucesso!');
+                toast.dark('Produto inserido com sucesso!');
                 
             }else{
                 const resp = await alterarProduto(nome, preco, descricao, categoria, id)
-                toast.dark('Filme alterado com sucesso!');
+                toast.dark('Produto alterado com sucesso!');
                 
             }   
         }catch(error) {
@@ -53,11 +48,21 @@ export default function Adicionar() {
         }
     }
 
+    async function novoClick() {
+        setNome('');
+        setCategoria('bebidas')
+        setDescricao('');
+        setPreco();
+        
+        setId(0);
+        setImagem('');
+    }
+
     function alterarImagem() {
         document.getElementById('upload-imagem').click();
     }
 
-    function mostrarImagem(imagem) {
+    function mostrarImagem() {
         if(typeof(imagem) == 'object'){
             return URL.createObjectURL(imagem);
         }else{
@@ -81,7 +86,7 @@ export default function Adicionar() {
                     <div className='upload-imagem' onClick={alterarImagem}>
                         <input type="file" id="upload-imagem" onChange={e => setImagem(e.target.files[0])} />
                         {imagem && 
-                            <img className='real-image' src={mostrarImagem(imagem)} alt="" />
+                            <img className='real-image' src={mostrarImagem()} alt="" />
                         }
                         {!imagem && 
                             <img src={upload} alt="" />
@@ -109,7 +114,8 @@ export default function Adicionar() {
                             <textarea placeholder='Ex: Sonho de doce de leite com flocos de coco' value={descricao} onChange={(e) => setDescricao(e.target.value)} ></textarea>
                         </div>
                     </form>
-                    <button className="btn" onClick={salvarClick}> SALVAR </button>
+                    <button className="btn" onClick={salvarClick}> {id == 0 ? 'SALVAR' : 'ALTERAR'} </button>
+                    <button className="btn" onClick={novoClick}> NOVO </button>
 
                 </div>
             </div>
