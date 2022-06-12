@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
+//APi
+import { alterarProduto, enviarImagem, enviarProduto, pegarImagem } from '../../../api/produtoApi';
 
 // Css
 import './index.scss';
+import { toast } from 'react-toastify';
 
 // Components
 import LeftBar from '../../../components/AdmPage/Leftbar'
@@ -11,26 +14,67 @@ import LeftBar from '../../../components/AdmPage/Leftbar'
 import upload from '../../../assets/images/admPage/upload.png'
 
 export default function Adicionar() {
-    const [formData, setFormData] = useState({
-        nm_produto: '',
-        nr_preco: '',
-        ds_produto: '',
-        nm_categoria: 'bebidas'
-    })
-
+    const [nome, setNome] = useState('');
+    const [preco, setPreco] = useState();
+    const [descricao, setDescricao] = useState('');
+    const [categoria, setCategoria] = useState('');
+   
+    
+    const [id, setId] = useState(0);
     const [imagem, setImagem] = useState('');
+    
+    async function salvarClick() {
+        console.log(imagem);
+        console.log(nome);
+        console.log(preco);
+        console.log(descricao);
+        console.log(categoria);
+        
+        try{
+            const funcionario = 1;
+            if(id == 0){
+                const resp = await enviarProduto(nome, preco, descricao, categoria, funcionario);
+                await enviarImagem(imagem, resp.insertedId);
+                setId(resp.insertedId);
+                toast.dark('Filme inserido com sucesso!');
+                
+            }else{
+                const resp = await alterarProduto(nome, preco, descricao, categoria, id)
+                toast.dark('Filme alterado com sucesso!');
+                
+            }   
+        }catch(error) {
+            if(error.response){
+                console.log(error.response);
+                toast.dark('❗ Todos os campos são necessarios!');
+            }else{
+                console.log(error);
+            }
+        }
+    }
 
     function alterarImagem() {
         document.getElementById('upload-imagem').click();
     }
 
     function mostrarImagem(imagem) {
-        return URL.createObjectURL(imagem);
+        if(typeof(imagem) == 'object'){
+            return URL.createObjectURL(imagem);
+        }else{
+            return pegarImagem(imagem);
+        }
     }
     
     return (
         <main className='adicionar-page'>
-            <LeftBar/>
+            <div className='not-responsive-green-bar'>
+                <LeftBar/>
+            </div>
+            <div className='responsive-green-bar'>
+                <div className='resposive-home'></div>
+                <div className='resposive-adicionar'></div>
+                <div className='resposive-consultar'></div>
+          </div>
             <div className='addprodutos'>
                 <div className='add-container'>
                     
@@ -46,15 +90,15 @@ export default function Adicionar() {
 
                     <form className='add-form' >
                         <div className='row-1'>
-                            <input placeholder='Ex: Sonho' type="text" name='nm_produto' value={formData.nm_produto} onChange={(e) => setFormData({ ...formData, nm_produto: e.target.value })} />
+                            <input placeholder='Ex: Sonho' type="text" name='nm_produto' value={nome} onChange={(e) => setNome(e.target.value)} />
                         </div>
                         <div className='row-2'>
                             <div className='item-1'>
-                                <input placeholder='Ex: 5.50' type="number" name='nr_preco' value={formData.nr_preco} onChange={(e) => setFormData({ ...formData, nr_preco: e.target.value })} />
+                                <input placeholder='Ex: 5.50' type="number" name='nr_preco' value={preco} onChange={(e) => setPreco(e.target.value)} />
                             </div>
 
                             <div className='item-2'>
-                                <select value={formData.nm_categoria} onChange={(e) => setFormData({ ...formData, nm_categoria: e.target.value })}>
+                                <select value={categoria} onChange={(e) => setCategoria(e.target.value)}>
                                     <option> bebidas </option>
                                     <option> salgados </option>
                                     <option> doces  </option>
@@ -62,10 +106,10 @@ export default function Adicionar() {
                             </div>
                         </div>
                         <div className='row-3'>
-                            <textarea placeholder='Ex: Sonho de doce de leite com flocos de coco' value={formData.ds_produto} onChange={(e) => setFormData({ ...formData, ds_produto: e.target.value })} ></textarea>
+                            <textarea placeholder='Ex: Sonho de doce de leite com flocos de coco' value={descricao} onChange={(e) => setDescricao(e.target.value)} ></textarea>
                         </div>
-                        <button className="btn" onSubmit={(e) => e.preventDefault()}> SALVAR </button>
                     </form>
+                    <button className="btn" onClick={salvarClick}> SALVAR </button>
 
                 </div>
             </div>

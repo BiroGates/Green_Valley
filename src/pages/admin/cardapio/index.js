@@ -26,12 +26,9 @@ export default function Cardapio() {
       const resp = await buscarPorNome(inputValue);
       setProdutos(resp);
     }
-        
       useEffect(()=>{
       carregarTodosOsProdutos();
     },[])
-
-    console.log('RENDERED');
 
     return (
       <main className='cardapio-page'>
@@ -52,6 +49,7 @@ export default function Cardapio() {
               <div className='products'>
                   {produtos.map(item =>{
                     return <AdmProduto
+                            key={item.id}
                             nome = {item.nome} 
                             desc ={item.descricao}
                             preco= {item.preco}

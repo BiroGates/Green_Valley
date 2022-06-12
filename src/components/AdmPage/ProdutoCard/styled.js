@@ -130,6 +130,54 @@ const StyleAdmProduto = styled.div`
         transform: scale(1.1);
         cursor: pointer;
     }
+    
+    @media (max-width:720px) {
+        .item-container{
+            width: 100%;
+            height: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            margin-bottom: 50px;
+            border-bottom: 2px solid green;
+        }
+        .item-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 250px;
+            height: 80%;
+        }
+        .item-img img{
+            width: 100%;
+            height: 100%;
+            margin: 0px 0px 20px 0px;
+        }
+        .item-text-name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .item-text > *{
+            padding-bottom: 40px;
+    
+        }
+        .edit{
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .edit img{
+            margin: 0;
+        }
+    }
 
 `;
 
