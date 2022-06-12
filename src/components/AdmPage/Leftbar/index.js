@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 // Css
 import './index.scss'
+
+import storage from 'local-storage';
+
+import { useNavigate } from 'react-router-dom';
 
 // Assets
 import user_icon from '../../../assets/images/admPage/user_icon.png';
@@ -13,6 +17,13 @@ import menu_plus from '../../../assets/images/admPage/mais.png'
 import MenuOptions from '../MenuOption';
 
 export default function LeftBar() {
+  const navigate = useNavigate();
+  
+  useEffect(()=>{
+    if(!storage('usuario-logado')){
+      navigate('/login');
+    }
+  },[])
   return (
     <main className='green-bar'>
         <div className='left-bar'>
