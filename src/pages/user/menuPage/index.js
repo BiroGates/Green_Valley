@@ -20,13 +20,6 @@ export default function Menu() {
           <Produtos/>
           <Produtos/>
           <Produtos/>
-          <Produtos/>
-          <Produtos/>
-          <Produtos/>
-          <Produtos/>
-          <Produtos/>
-          <Produtos/>
-          <Produtos/>
         </div>
     </div>
   )

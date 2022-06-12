@@ -68,10 +68,15 @@
     flex-wrap: wrap;
 
     padding-top: 30px;
-    padding-bottom: 20px;
 }
 
 @media ( max-width:480px ){
+    .produtos-container{
+        
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
     .filter-buttons .btn{
         width: 130px;
         height: 30px;

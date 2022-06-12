@@ -45,6 +45,26 @@ const StyledProdutos = styled.div `
 
     }
 
+    @media ( max-width:480px ){
+        .container{
+            width: 250px;
+            height: 330px;
+
+            font-size: 16px;
+
+            font-family: 'medio';
+        }
+        .img{
+            width: 120px;
+            height: 100px;
+        }
+        .img img{
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+    }
+
 `;
 
 export { StyledProdutos }
