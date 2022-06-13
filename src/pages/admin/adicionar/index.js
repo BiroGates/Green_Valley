@@ -22,7 +22,7 @@ export default function Adicionar() {
     const [nome, setNome] = useState('');
     const [preco, setPreco] = useState();
     const [descricao, setDescricao] = useState('');
-    const [categoria, setCategoria] = useState('');
+    const [categoria, setCategoria] = useState('bebidas');
    
     
     const [id, setId] = useState(0);
@@ -130,7 +130,7 @@ export default function Adicionar() {
                             </div>
 
                             <div className='item-2'>
-                                <select onChange={(e) => setCategoria(e.target.value)}>
+                                <select value={categoria} onChange={(e) => setCategoria(e.target.value)}>
                                     <option> bebidas </option>
                                     <option> salgados </option>
                                     <option> doces  </option>

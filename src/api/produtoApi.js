@@ -14,6 +14,16 @@ export async function buscarPorNome(nome) {
     return resposta.data;
 }
 
+export async function buscarPorId(id) {
+    const resposta = await api.get(`/produto/buscarid/${id}`);
+    return resposta.data;
+}
+
+export async function buscarPorCategoria(categoria) {
+    const resposta = await api.get(`/produto/${categoria}`);
+    return resposta.data
+}
+
 export async function enviarProduto(nome, preco, descricao, categoria, funcionario) {
     const resposta = await api.post(`/produto`, {
         nome: nome,
@@ -51,10 +61,6 @@ export function pegarImagem(imagem) {
     return `${api.getUri()}/${imagem}`
 }
 
-export async function buscarPorId(id) {
-    const resposta = await api.get(`/produto/buscarid/${id}`);
-    return resposta.data;
-}
 
 export async function deletarProduto(id) {
     const resposta = await api.delete(`/produto/delete/${id}`)

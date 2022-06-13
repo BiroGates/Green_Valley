@@ -24,9 +24,24 @@ import menu_home from '../../../assets/images/admPage/casinha.png'
 import menu_hamburger from '../../../assets/images/admPage/menuzinho.png'
 import menu_plus from '../../../assets/images/admPage/mais.png'
 
+import storage from 'local-storage'
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
+  const [nome, setNome] = useState();
+  const [email, setEmail] = useState();
+  const navigate = useNavigate();
+  
+  useEffect(()=>{
+    if(storage('usuario-logado')){
+      setNome(storage('usuario-logado').data.nome)
+      setEmail(storage('usuario-logado').data.email)
+    }else{
+      navigate('/login')
+    }
+  },[])
+
   return (
     <main className='home-main'>
         <div className='not-responsive-green-bar'>
@@ -44,11 +59,9 @@ export default function Home() {
               </div>
               <div className='inputs'>
                 <label> NOME: </label>
-                <input type="text" />
+                <input type="text" value={nome} />
                 <label> EMAIL: </label>
-                <input type="text" />
-                <label> SENHA: </label>
-                <input type="password" />
+                <input type="text" value={email}/>
               </div>
             </div>
         </div>  
