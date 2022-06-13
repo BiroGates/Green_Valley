@@ -103,9 +103,9 @@ export default function Adicionar() {
                 <LeftBar/>
             </div>
             <div className='responsive-green-bar'>
-                <div className='resposive-home'></div>
-                <div className='resposive-adicionar'></div>
-                <div className='resposive-consultar'></div>
+                <div className='resposive-home' onClick={()=> navigate('/admin')}></div>
+                <div className='resposive-adicionar' onClick={()=> navigate('/admin/adicionar')}></div>
+                <div className='resposive-consultar' onClick={()=> navigate('/admin/cardapio')}></div>
           </div>
             <div className='addprodutos'>
                 <div className='add-container'>

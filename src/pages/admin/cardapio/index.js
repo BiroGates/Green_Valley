@@ -8,12 +8,15 @@ import AdmProduto from '../../../components/AdmPage/ProdutoCard';
 
 // Api
 import { listarTodosOsProdutos, buscarPorNome, pegarImagem } from '../../../api/produtoApi';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Cardapio() {
     const[produtos, setProdutos] = useState([]);
     const[inputValue, setInputValue] = useState('');
+
+    const navigate = useNavigate();
 
     async function carregarTodosOsProdutos (){
         const resp = await listarTodosOsProdutos();
@@ -35,9 +38,9 @@ export default function Cardapio() {
             <LeftBar/>
           </div>
           <div className='responsive-green-bar'>
-            <div className='resposive-home'></div>
-            <div className='resposive-adicionar'></div>
-            <div className='resposive-consultar'></div>
+                <div className='resposive-home' onClick={()=> navigate('/admin')}></div>
+                <div className='resposive-adicionar' onClick={()=> navigate('/admin/adicionar')}></div>
+                <div className='resposive-consultar' onClick={()=> navigate('/admin/cardapio')}></div>
           </div>
           <div className='cardapio'>
               <div className='src-bar'>
