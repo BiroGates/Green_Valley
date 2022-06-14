@@ -48,7 +48,7 @@ const StyleAdmProduto = styled.div`
     
         font-size: 1.2em;
         font-family: 'medio';
-    
+        word-wrap: break-word
     }
 
     .item-text-desc{
@@ -104,28 +104,12 @@ const StyleAdmProduto = styled.div`
         width: 100%;
         height: 100%;
     }
-
+            
     .edit-btn{
-        width: 130px;
-        height: 30px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: 15px;
-
-        background-color: #834020 ;
-        
-        border-radius: 10px;
-    
-        font-size: 1em;
-        font-family: 'medio';
-        color: white;
-
-        transition: .3s;
+        width: 40px;
+        height: auto
     }
-    
+
     .edit-btn:hover{
         transform: scale(1.1);
         cursor: pointer;
@@ -142,7 +126,7 @@ const StyleAdmProduto = styled.div`
             flex-direction: column;
             
             margin-bottom: 50px;
-            border-bottom: 2px solid green;
+            border-bottom: 2px solid #772241;
         }
         .item-img{
             display: flex;

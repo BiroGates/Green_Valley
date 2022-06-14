@@ -96,15 +96,29 @@ export default function Cardapio() {
                                     <td>{item.preco}</td>
                                     <td>{item.categoria}</td>
                                     <td>
-                                        <img src={trashcan} alt='editar'onClick={() => removerProduto(item.id)}  />
+                                        <img className='remover' src={trashcan} alt='editar'onClick={() => removerProduto(item.id)}  />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <img src={lapis} alt='remover' onClick={() => editar(item.id)} />
+                                        <img className='editar' src={lapis} alt='remover' onClick={() => editar(item.id)} />
                                     </td>
                                 </tr>  
                             )
                         })}
                     </tbody>
                   </table>
+                  <div className='responsive-products'>
+                    {produtos.map(item => {
+                        return (
+                            <AdmProduto
+                                nome={item.nome}
+                                desc={item.descricao}
+                                preco={item.preco}
+                                imagem={item.imagem}
+                                id={item.id}
+                                carregarTodosOsProdutos={carregarTodosOsProdutos}
+                            />
+                        );
+                    })}
+                  </div>
               </div>
           </div>
       </main>

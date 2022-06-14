@@ -144,10 +144,15 @@
     tbody tr:hover {
         background-color: #e1e1e1;
     }
-    td img {
+    td img{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+   .editar, .remover {
         width: 25px;
         height: 25px;
-        cursor: pointer;
     }
     tr td:nth-child(2) {
         text-overflow: ellipsis;
@@ -165,6 +170,9 @@
     tr:hover td:nth-last-child(1) img {
         visibility: visible;
     }
+    .responsive-products{
+        display: none;
+    }
 
 }
 
@@ -179,7 +187,7 @@
     
         width: 100%;
         height: auto;
-    
+        overflow: hidden;
     
         .cardapio{
             width: 100%;
@@ -237,7 +245,7 @@
             border: none;
             border-radius: 30px;
         
-            background-color: rgba(196, 196, 196, 0.43);;
+            background-color: #744227;
         
             font-size: 1em;
             font-family: 'regular';
@@ -300,6 +308,12 @@
             background-size: cover;
             background-position: center;
             
+        }
+        .responsive-products{
+            display: block;
+        }
+        table{
+            display: none;
         }
     }
 }
