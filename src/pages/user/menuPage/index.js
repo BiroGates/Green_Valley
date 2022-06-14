@@ -1,7 +1,6 @@
 import './index.scss'
 import '../../../assets/common/common.css'
 
-import Produtos from '../../../components/Produto'
 import { useEffect, useState } from 'react'
 
 import { buscarPorCategoria, listarTodosOsProdutos } from '../../../api/produtoApi.js'
@@ -32,15 +31,7 @@ export default function Menu() {
             <div className='btn'onClick={() => carregarTodosOsProdutos()}> Todos </div>
         </div>
         <div className='produtos-container'>
-          {produtos.map(item => {
-              return <Produtos
-                        key={item.id}
-                        nome={item.nome}
-                        descricao={item.descricao}
-                        preco={item.preco}
-                        imagem={item.imagem}
-                      />
-          })}
+          
         </div>
     </div>
   )

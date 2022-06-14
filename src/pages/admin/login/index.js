@@ -21,15 +21,19 @@ export default function LoginPage() {
     
     async function entrar(){
       try{
-        const resposta = await login(email, senha);
+        const resposta = await login(email.trim(), senha.trim());
         storage('usuario-logado', resposta)
         
-        toast.dark('Usuario Logado Com Sucesso!');
+        toast.dark('💹 Usuario Logado Com Sucesso!', {
+          delay: 0,
+          autoClose: 1300
+        });
 
         setTimeout(()=>{
           navigate('/admin')
-        }, 3000)
+        }, 2000)
       }catch(error) {
+          console.log(error);
           toast.error(error.response.data.error);
       }
     }

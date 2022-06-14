@@ -4,6 +4,9 @@ import {useParams} from 'react-router-dom'
 //Api
 import { alterarProduto, buscarPorId, enviarImagem, enviarProduto, pegarImagem } from '../../../api/produtoApi';
 
+// Coisas
+import storage from 'local-storage';
+
 // Css
 import './index.scss';
 import { toast } from 'react-toastify';
@@ -33,26 +36,33 @@ export default function Adicionar() {
 
     async function salvarClick() {
         try{
-            const funcionario = 1;
+            const funcionario = storage('usuario-logado').data.id;
             if(!imagem) throw new Error('Por favor enviei uma imagem!');
             if(id == 0){
                 const resp = await enviarProduto(nome, preco, descricao, categoria, funcionario);
                 await enviarImagem(imagem, resp.insertedId);
                 setId(resp.insertedId);
-                toast.dark('Produto inserido com sucesso!');
+                toast.dark('🚀 Produto inserido com sucesso!');
                 
             }else{
+                if(!imagem) throw new Error('Por favor enviei uma imagem!');
+                if( !nome        ||
+                    !preco       ||
+                    !categoria   ||
+                    !descricao ||
+                    !id)
+                        throw new Error('Todos os campos são necessarios!');
+                    
                 const resp = await alterarProduto(nome, preco, descricao, categoria, id)
-                await enviarImagem(imagem, id);
-                toast.dark('Produto alterado com sucesso!');
                 
+                await enviarImagem(imagem, id);
+                toast.dark('🚀 Produto alterado com sucesso!');
             }   
         }catch(error) {
             if(error.response){
-                console.log(error.response);
                 toast.dark('❗ Todos os campos são necessarios!');
             }else{
-                console.log(error);
+                toast.dark('❗ Todos os campos são necessarios!'); 
             }
         }
     }

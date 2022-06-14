@@ -28,6 +28,7 @@ export default function Cardapio() {
 
     async function buscarProdutoPorNome() {
       const resp = await buscarPorNome(inputValue);
+      console.log(resp);
       setProdutos(resp);
     }
 
@@ -72,7 +73,7 @@ export default function Cardapio() {
                   <div className='src-bar'>
                     <div className='titulo'> CARDAPIO </div>
                     <div className='bar'> <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
-                    <div className='bar-btn' onClick={inputValue ? buscarProdutoPorNome : carregarTodosOsProdutos}> BUSCAR </div>
+                    <div className='bar-btn' onClick={buscarProdutoPorNome}> BUSCAR </div>
                   </div>
                   <table>
                     <thead>
@@ -90,7 +91,7 @@ export default function Cardapio() {
                             return (
                                 <tr>
                                     <td>#{ item.id }</td>
-                                    <td>imagem bme dahora</td>
+                                    <td><img src={pegarImagem(item.imagem)} alt="" /></td>
                                     <td>{item.nome}</td>
                                     <td>{item.preco}</td>
                                     <td>{item.categoria}</td>
