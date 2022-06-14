@@ -10,7 +10,8 @@ import AdmProduto from '../../../components/AdmPage/ProdutoCard';
 import { listarTodosOsProdutos, buscarPorNome, pegarImagem } from '../../../api/produtoApi';
 import { useNavigate } from 'react-router-dom';
 
-
+import trashcan from '../../../assets/images/admPage/lixeira.png'
+import lapis from '../../../assets/images/admPage/image43.svg'
 
 export default function Cardapio() {
     const[produtos, setProdutos] = useState([]);
@@ -43,23 +44,87 @@ export default function Cardapio() {
                 <div className='resposive-consultar' onClick={()=> navigate('/admin/cardapio')}></div>
           </div>
           <div className='cardapio'>
-              <div className='src-bar'>
-                <div className='titulo'> CARDAPIO </div>
-                <div className='bar'> <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
-                <div className='bar-btn' onClick={inputValue ? buscarProdutoPorNome : carregarTodosOsProdutos}> BUSCAR </div>
-              </div>
               <div className='products'>
-                  {produtos ? produtos.map(item =>{
-                    return <AdmProduto
-                            key={item.id}
-                            carregarTodosOsProdutos={carregarTodosOsProdutos}
-                            imagem={item.imagem}
-                            nome = {item.nome} 
-                            desc ={item.descricao}
-                            preco= {item.preco}
-                            id={item.id}
-                            />
-                  }): ''}
+                  <div className='src-bar'>
+                    <div className='titulo'> CARDAPIO </div>
+                    <div className='bar'> <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
+                    <div className='bar-btn' onClick={inputValue ? buscarProdutoPorNome : carregarTodosOsProdutos}> BUSCAR </div>
+                  </div>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>IMAGEM</th>
+                            <th>PRODUTO</th>
+                            <th>PRECO</th>
+                            <th>CATEGORIA</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#01</td>
+                            <td>Harry Potter e a Pedra Filosofal</td>
+                            <td>8,0</td>
+                            <td>04/01/05</td>
+                            <td>Sim</td>
+                            <td>
+                                <img src={trashcan} alt='editar' />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src={lapis} alt='remover' />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#01</td>
+                            <td>Harry Potter e a Pedra Filosofal</td>
+                            <td>8,0</td>
+                            <td>04/01/05</td>
+                            <td>Sim</td>
+                            <td>
+                                <img src={trashcan} alt='editar' />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src='/assets/images/icon-remover.svg' alt='remover' />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#01</td>
+                            <td>Harry Potter e a Pedra Filosofal</td>
+                            <td>8,0</td>
+                            <td>04/01/05</td>
+                            <td>Sim</td>
+                            <td>
+                              <img src={trashcan} alt='editar' />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src='/assets/images/icon-remover.svg' alt='remover' />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#01</td>
+                            <td>Harry Potter e a Pedra Filosofal</td>
+                            <td>8,0</td>
+                            <td>04/01/05</td>
+                            <td>Sim</td>
+                            <td>
+                                <img src={trashcan} alt='editar' />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src='/assets/images/icon-remover.svg' alt='remover' />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#01</td>
+                            <td>Harry Potter e a Pedra Filosofal</td>
+                            <td>8,0</td>
+                            <td>04/01/05</td>
+                            <td>Sim</td>
+                            <td>
+                                <img src={trashcan} alt='editar' />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <img src='/assets/images/icon-remover.svg' alt='remover' />
+                            </td>
+                        </tr>
+                      
+                    </tbody>
+                  </table>
               </div>
           </div>
       </main>
