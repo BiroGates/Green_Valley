@@ -288,7 +288,7 @@ export default function LandyingPage() {
                         <p>Português do Brasil</p>
                     </div>
                     
-                    <div className="rodape-imagem29">
+                    <div className="rodape-imagem">
                         <img src={logo_G} />
                     </div>
                 </div>

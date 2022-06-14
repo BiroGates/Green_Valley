@@ -514,6 +514,7 @@
 @media(max-width:480px) {
     .main {
         overflow-x: hidden;
+
         .hidden {
             visibility: hidden;
         }
@@ -667,12 +668,13 @@
             right: 8.5em;
             width: 65px;
         }
-        .fx-four{
+
+        .fx-four {
             height: 700px;
-    
+
         }
 
-        .fx-four-hero{
+        .fx-four-hero {
             height: 500px;
         }
 
@@ -694,7 +696,7 @@
         }
 
         .fx-four-images img {
-            width:85px;
+            width: 85px;
             height: min-content;
         }
 
@@ -704,36 +706,37 @@
             position: fixed;
             visibility: hidden;
         }
-        
+
         .linha-1 {
             display: flex;
             flex-direction: row;
             align-self: center;
             width: 320px;
-    
+
             position: relative;
             top: 50px;
         }
-    
+
         .linha-2 {
             display: flex;
             flex-direction: row;
             align-self: center;
             width: 320px;
-            
-            position:relative;
+
+            position: relative;
             top: 60px;
         }
-    
+
         .linha-3 {
             display: flex;
             flex-direction: row;
             align-self: center;
             width: 320px;
-            
+
             position: relative;
             top: 25px;
         }
+
         .fx-five {
             display: flex;
             flex-direction: column;
@@ -742,43 +745,43 @@
             background-color: #603601;
             height: 400px;
         }
-    
+
         .fx-five-title {
             font-family: 'regular';
             font-size: 20px;
             color: #ffffff;
         }
-    
+
         .fx-five-hero {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: 60%;
         }
-    
+
         .fx-five-local iframe {
             width: 330px;
             margin-left: -3em;
             height: auto;
             border-radius: 8px;
         }
-    
+
         .endereco {
-    
+
             display: flex;
             flex-direction: column;
             text-align: center;
             align-self: center;
             justify-content: space-between;
             height: 200px;
-    
+
             color: white;
             font-family: 'regular';
             font-size: 13px;
             margin-top: 1.5em;
             margin-bottom: -3em;
         }
-    
+
         .fx-five-button img {
             position: relative;
             margin-top: 3px;
@@ -786,7 +789,7 @@
             margin-left: 1px;
             width: 20px;
         }
-    
+
         .fx-five-button {
             display: flex;
             flex-direction: row;
@@ -794,23 +797,23 @@
             align-items: center;
             padding-bottom: 3px;
             margin-bottom: 5em;
-    
+
             background-color: #ffffff;
             color: #000000;
-    
+
             width: 190px;
             border-radius: 20px;
-    
+
             font-family: 'medio';
             transition: .5s;
-    
+
         }
-    
+
         .fx-five-button:hover {
             transform: scale(1.2);
             cursor: pointer;
         }
-    
+
         .rodape {
             display: flex;
             flex-direction: column;
@@ -819,56 +822,56 @@
             height: auto;
             background-color: #ffcc80;
         }
-    
+
         .rodape-hero {
             display: flex;
             flex-direction: row;
             width: 75%;
         }
-    
+
         .sua-cafeteria {
             display: flex;
             flex-direction: column;
             margin-left: -2em;
         }
-    
+
         .sua-cafeteria h1 {
             font-family: 'medio';
             font-size: 25px;
-    
+
         }
-    
+
         .nacionalidade p {
             font-family: 'regular';
             font-size: 12px;
         }
-    
+
         .nacionalidade img {
             width: 30px;
         }
-    
+
         .nacionalidade {
             display: flex;
             flex-direction: row;
             align-items: left;
             width: 200px;
         }
-    
+
         .redes {
             display: flex;
             flex-direction: row;
             align-items: left;
         }
-    
+
         .redes img {
             width: 70px;
         }
-    
-        .produto{
+
+        .produto {
             margin-bottom: 2em;
         }
 
-        .produto3{
+        .produto3 {
             margin-top: 2em;
         }
 
@@ -881,7 +884,7 @@
             text-align: left;
             line-height: 30px;
         }
-    
+
         .produto a,
         .produto1 a,
         .produto2 a,
@@ -892,7 +895,7 @@
             text-decoration: none;
             text-align: left;
         }
-    
+
         .rodape-direita {
             display: flex;
             flex-direction: column;
@@ -900,19 +903,255 @@
             margin-left: 5em;
             margin-top: 2em;
         }
-        .rodape-esquerda{
+
+        .rodape-esquerda {
             display: flex;
             flex-direction: column;
             margin-top: 6em;
             margin-left: -12em;
         }
-    
+
         .rodape-logo img {
             width: 100px;
         }
-        .rodape-imagem29{
+
+        .rodape-imagem29 {
             display: none;
         }
+
+    }
+}
+
+@media(max-width:720px) {
+    .main {
+        overflow-x: hidden;
+
+        .one-nav {
+            position: relative;
+            bottom: 85px;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .one-hero-section {
+            flex-direction: column;
+            justify-self: flex-start;
+            align-self: center;
+            justify-content: space-around;
+            width: 480px;
+            height: 600px;
+        }
+
+        .one-hero-image {
+            align-self: flex-start;
+            padding-left: 10px;
+        }
+
+        .one-hero-image img {
+            width: 250px;
+        }
+
+        .fx-one {
+            justify-content: space-evenly;
+
+            height: 900px;
+        }
+
+        .fx-two {
+            height: 700px;
+        }
+
+        .fx-two-hero {
+            height: 600px;
+            flex-direction: column;
+        }
+
+        .two-hero-images {
+            width: 250px;
+        }
+
+        .cro img {
+            width: 100px;
+
+        }
+
+        .cafe img {
+            width: 135px;
+        }
+
+        .cafe {
+            height: 200px;
+        }
+
+        .two-hero-text {
+            width: 400px;
+        }
+
+        .two-hero-text h1 {
+            font-size: 18px;
+        }
+
+        .two-hero-text p {
+            font-size: 13px;
+        }
+
+        .fx-three {
+            height: 900px;
+            justify-content: center;
+        }
+
+        .three-hero {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 750px;
+        }
+
+        .three-hero-bolo,
+        .three-hero-entrega,
+        .three-hero-ingredientes {
+            height: 400px;
+        }
+
+        .fx-four-hero {
+            height: 550px;
+        }
+
+        .fx-four-coffee,
+        .fx-four-coffee2,
+        .fx-four-coffee3 {
+            position: fixed;
+            visibility: hidden;
+        }
+
+        .linha-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 300px;
+
+            position: relative;
+        }
+
+        .linha-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 300px;
+
+            position: relative;
+            top: 10px;
+        }
+
+        .linha-3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 300px;
+
+            position: relative;
+            top: 20px;
+        }
+
+        .fx-four-images {
+            padding: 20px;
+        }
+
+
+        .linha-1 img,
+        .linha-2 img,
+        .linha-3 img {
+            width: 100px;
+        }
+
+        .linha-1,
+        .linha-2,
+        .linha-3 {
+            width: 350px;
+        }
+
+        .fx-five {
+            border: solid rgb(0, 0, 0);
+            width: 720px;
+            height: 700px;
+        }
+
+        .fx-five-hero {
+            flex-direction: column;
+            justify-content: space-between;
+            height: 500px;
+        }
+
+        .endereco {
+            justify-content: space-around;
+            align-content: flex-end;
+        }
+
+        .fx-five-local iframe {
+            width: 450px;
+            height: 300px;
+        }
+
+        .rodape {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 900px;
+        }
+
+        .rodape-hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 800px;
+            width: 300px;
+        }
         
+        .sua-cafeteria img{
+            width: 150px;
+        }
+
+        .rodape-direita,
+        .rodape-esquerda {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: center;
+            width: 400px;
+        }
+
+        .rodape {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 900px;
+        }
+
+        .rodape-hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 800px;
+            width: 300px;
+        }
+
+        .sua-cafeteria {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 180px;
+        }
+
+        .rodape-direita,
+        .rodape-esquerda {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-self: center;
+            width: 400px;
+        }
+
     }
 }
