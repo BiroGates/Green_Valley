@@ -49,7 +49,7 @@ export default function Adicionar() {
                 if( !nome        ||
                     !preco       ||
                     !categoria   ||
-                    !descricao ||
+                    !descricao   ||
                     !id)
                         throw new Error('Todos os campos são necessarios!');
                     
@@ -62,7 +62,7 @@ export default function Adicionar() {
             if(error.response){
                 toast.dark('❗ Todos os campos são necessarios!');
             }else{
-                toast.dark('❗ Todos os campos são necessarios!'); 
+                toast.dark('❗ ' + error.message); 
             }
         }
     }
