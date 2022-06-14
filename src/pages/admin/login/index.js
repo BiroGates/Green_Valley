@@ -30,7 +30,7 @@ export default function LoginPage() {
           navigate('/admin')
         }, 3000)
       }catch(error) {
-          console.log(error.response.data.error);
+          toast.error(error.response.data.error);
       }
     }
 
