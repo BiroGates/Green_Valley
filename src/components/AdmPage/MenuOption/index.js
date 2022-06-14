@@ -24,7 +24,6 @@ export default function MenuOptions({ text, icon, link }) {
             <div className='icon'> <img src={ icon } alt="" /> </div>
             <div className='name'> { text } </div>
         </div>
-        <div className='arrow' > <img src={ seta_home } alt="" /> </div>
     </main>
   )
 }

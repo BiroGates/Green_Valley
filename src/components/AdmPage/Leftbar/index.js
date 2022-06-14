@@ -13,6 +13,7 @@ import menu_home from '../../../assets/images/admPage/casinha.png'
 import menu_hamburger from '../../../assets/images/admPage/menuzinho.png'
 import menu_plus from '../../../assets/images/admPage/mais.png'
 import sair from '../../../assets/images/admPage/sair.png'
+import logo from '../../../assets/images/landyingPage/Logo.png'
 
 // Components
 import MenuOptions from '../MenuOption';
@@ -29,7 +30,7 @@ export default function LeftBar() {
     <main className='green-bar'>
         <div className='left-bar'>
           <div className='info-container'>
-            <div className='info-img'> <img src={ user_icon } alt="user-icon" /> </div>
+            <div className='info-img'> <img src={ logo } alt="user-icon" /> </div>
             <div className='info-user'> ADMIN@ADMIN </div>
           </div>
           <div className='option-container'>

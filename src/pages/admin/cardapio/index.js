@@ -6,8 +6,10 @@ import './index.scss'
 import LeftBar from '../../../components/AdmPage/Leftbar'
 import AdmProduto from '../../../components/AdmPage/ProdutoCard';
 
+import { confirmAlert } from 'react-confirm-alert';
+
 // Api
-import { listarTodosOsProdutos, buscarPorNome, pegarImagem } from '../../../api/produtoApi';
+import { listarTodosOsProdutos, buscarPorNome, pegarImagem, deletarProduto } from '../../../api/produtoApi';
 import { useNavigate } from 'react-router-dom';
 
 import trashcan from '../../../assets/images/admPage/lixeira.png'
@@ -16,8 +18,8 @@ import lapis from '../../../assets/images/admPage/image43.svg'
 export default function Cardapio() {
     const[produtos, setProdutos] = useState([]);
     const[inputValue, setInputValue] = useState('');
-
     const navigate = useNavigate();
+
 
     async function carregarTodosOsProdutos (){
         const resp = await listarTodosOsProdutos();
@@ -29,6 +31,28 @@ export default function Cardapio() {
       setProdutos(resp);
     }
 
+    async function editar(id) {
+        navigate(`/admin/alterar/${id}`)
+    }
+
+    async function removerProduto(id) {
+        confirmAlert({
+            title:'Remover Produto',
+            message: 'Deseja remover esse produto ?',
+            buttons:[
+                {
+                    label: 'SIM',
+                    onClick: async () => {
+                        const resp = await deletarProduto(id);
+                        carregarTodosOsProdutos();
+                    }
+                },
+                {
+                    label: 'NÃO'
+                }
+            ]
+        })
+    }
 
     useEffect(()=>{
       carregarTodosOsProdutos();
@@ -62,67 +86,22 @@ export default function Cardapio() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>#01</td>
-                            <td>Harry Potter e a Pedra Filosofal</td>
-                            <td>8,0</td>
-                            <td>04/01/05</td>
-                            <td>Sim</td>
-                            <td>
-                                <img src={trashcan} alt='editar' />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src={lapis} alt='remover' />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#01</td>
-                            <td>Harry Potter e a Pedra Filosofal</td>
-                            <td>8,0</td>
-                            <td>04/01/05</td>
-                            <td>Sim</td>
-                            <td>
-                                <img src={trashcan} alt='editar' />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src='/assets/images/icon-remover.svg' alt='remover' />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#01</td>
-                            <td>Harry Potter e a Pedra Filosofal</td>
-                            <td>8,0</td>
-                            <td>04/01/05</td>
-                            <td>Sim</td>
-                            <td>
-                              <img src={trashcan} alt='editar' />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src='/assets/images/icon-remover.svg' alt='remover' />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#01</td>
-                            <td>Harry Potter e a Pedra Filosofal</td>
-                            <td>8,0</td>
-                            <td>04/01/05</td>
-                            <td>Sim</td>
-                            <td>
-                                <img src={trashcan} alt='editar' />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src='/assets/images/icon-remover.svg' alt='remover' />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>#01</td>
-                            <td>Harry Potter e a Pedra Filosofal</td>
-                            <td>8,0</td>
-                            <td>04/01/05</td>
-                            <td>Sim</td>
-                            <td>
-                                <img src={trashcan} alt='editar' />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <img src='/assets/images/icon-remover.svg' alt='remover' />
-                            </td>
-                        </tr>
-                      
+                        {produtos.map(item => {
+                            return (
+                                <tr>
+                                    <td>#{item.id}</td>
+                                    <td>imagem bme dahora</td>
+                                    <td>{item.nome}</td>
+                                    <td>{item.preco}</td>
+                                    <td>{item.categoria}</td>
+                                    <td>
+                                        <img src={trashcan} alt='editar'onClick={() => removerProduto(item.id)}  />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <img src={lapis} alt='remover' onClick={() => editar(item.id)} />
+                                    </td>
+                                </tr>  
+                            )
+                        })}
                     </tbody>
                   </table>
               </div>

@@ -25,7 +25,7 @@ import menu_hamburger from '../../../assets/images/admPage/menuzinho.png'
 import menu_plus from '../../../assets/images/admPage/mais.png'
 
 import storage from 'local-storage'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
