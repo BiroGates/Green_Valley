@@ -89,7 +89,7 @@ export default function Cardapio() {
                         {produtos.map(item => {
                             return (
                                 <tr>
-                                    <td>#{item.id}</td>
+                                    <td>#{ item.id }</td>
                                     <td>imagem bme dahora</td>
                                     <td>{item.nome}</td>
                                     <td>{item.preco}</td>
