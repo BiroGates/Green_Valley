@@ -58,6 +58,7 @@ export default function Cardapio() {
     useEffect(()=>{
       carregarTodosOsProdutos();
     },[])
+    console.log(produtos);
     return (
       <main className='cardapio-page'>
           <div className='not-responsive-green-bar'>
@@ -109,6 +110,7 @@ export default function Cardapio() {
                     {produtos.map(item => {
                         return (
                             <AdmProduto
+                                key={item.id}    
                                 nome={item.nome}
                                 desc={item.descricao}
                                 preco={item.preco}

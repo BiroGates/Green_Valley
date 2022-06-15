@@ -45,7 +45,6 @@ export default function AdmProduto({ nome, desc, preco, imagem, id, carregarTodo
             ]
         })
     }
-    
     useEffect(() => {
         getUrl();
     },[])

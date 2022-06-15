@@ -46,10 +46,10 @@ export default function Adicionar() {
                 
             }else{
                 if(!imagem) throw new Error('Por favor enviei uma imagem!');
-                if( !nome        ||
-                    !preco       ||
-                    !categoria   ||
-                    !descricao   ||
+                if( !nome.trim()        ||
+                    !preco.trim()       ||
+                    !categoria.trim()   ||
+                    !descricao.trim()   ||
                     !id)
                         throw new Error('Todos os campos são necessarios!');
                     
