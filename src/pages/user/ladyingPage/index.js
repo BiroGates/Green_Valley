@@ -287,10 +287,6 @@ export default function LandyingPage() {
                     <div className="nacionalidade">
                         <p>Português do Brasil</p>
                     </div>
-                    
-                    <div className="rodape-imagem">
-                        <img src={logo_G} />
-                    </div>
                 </div>
                 <div className="rodape-esquerda">
                     <div class="produto">
