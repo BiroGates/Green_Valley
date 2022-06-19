@@ -72,6 +72,33 @@
     padding-top: 30px;
 }
 
+.produto{
+    width: 370px;
+    height: 378px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+    border-radius: 10px;
+
+    margin-bottom: 50px;
+
+    background-color: white;
+}
+
+.produto div {
+    width: 80%;
+    text-align: center;
+}
+
+.produto div:nth-child(2){
+    font-size: 1.3em;
+    font-family: 'medio';
+}
+
+
 @media ( max-width:480px ){
     .produtos-container{
         
