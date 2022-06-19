@@ -748,7 +748,7 @@
 @media(max-width:480px) {
     .main {
         overflow-x: hidden;
-
+        width: 480px;
         .fx-one {
             justify-content: space-evenly;
             height: 750px;
@@ -926,75 +926,60 @@
             width: 65px;
         }
 
-        .fx-four {
-            height: 700px;
+      
 
+
+        .fx-four-hero{
+            position: relative;
+            top: 1em;
+            justify-content: space-between;
+            height: 450px;
         }
 
-        .fx-four-hero {
+        .fx-four{
             height: 500px;
         }
 
-        .fx-four-text h1 {
+        .fx-four-images img {
+            width: 65px;
+            height: min-content;
+        }
+        .one, .for, .seven{
+            position: absolute;
+            left: 60px;
+        }
+        .two, .five, .oito{
+            position: absolute;
+            left: 130px;
+        }
+        .three,.six,.nine{
+            position: absolute;
+            left: 200px;
+        }
+        .seven,.oito,.nine{
+            bottom:6em;
+        }
+             
+        .fx-four-images{
+            position: relative;
+            right: 4.5em;
+            top: 3em;
+            height: 200px;    
+        }
+
+        .fx-four-text{
+            position: relative;
+            left: 2em;
+            width: 300px;
+        }
+
+        .fx-four-text h1{
             font-size: 18px;
         }
 
-        .fx-four-text p {
-            font-size: 14px;
+        .fx-four-text p{
+            font-size: 13px;
         }
-
-        .fx-four-images {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 260px;
-            width: 150px;
-
-        }
-
-        .fx-four-images img {
-            width: 85px;
-            height: min-content;
-        }
-
-        .fx-four-coffee,
-        .fx-four-coffee2,
-        .fx-four-coffee3 {
-            position: fixed;
-            visibility: hidden;
-        }
-
-        .linha-1 {
-            display: flex;
-            flex-direction: row;
-            align-self: center;
-            width: 320px;
-
-            position: relative;
-            top: 50px;
-        }
-
-        .linha-2 {
-            display: flex;
-            flex-direction: row;
-            align-self: center;
-            width: 320px;
-
-            position: relative;
-            top: 60px;
-        }
-
-        .linha-3 {
-            display: flex;
-            flex-direction: row;
-            align-self: center;
-            width: 320px;
-
-            position: relative;
-            top: 25px;
-        }
-
         .fx-five {
             display: flex;
             flex-direction: column;
@@ -1076,5 +1061,204 @@
             right: 50px;
         }
 
+    }
+}
+
+@media(max-width:300px) {
+    .main {
+        width: 300px;
+
+        .fx-two {
+            height: 450px;
+        }
+
+        .two-hero-images {
+            position: relative;
+            bottom: 50em;
+            left: 7em;
+        }
+
+        .two-hero-text {
+            position: relative;
+            left: 8px;
+            bottom: 50px;
+            width: 280px;
+            height: 150px;
+        }
+
+        .two-hero-text p {
+            font-size: 12px;
+        }
+
+        .two-hero-text h1 {
+            font-size: 14px;
+        }
+
+        .two-button {
+            font-size: 10px;
+        }
+
+
+        .fx-three{
+            height: 800px;
+        }
+
+        .three-hero{
+            justify-content: space-evenly;
+        }
+
+        .three-hero-ingredientes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 300px;
+            height: 180px;
+        }
+
+        .three-hero-entrega {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 280px;
+            height: 180px;
+        }
+
+        .three-hero-bolo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            width: 280px;
+            height: 180px;
+        }
+
+        .three-hero img {
+            position: absolute;
+            top: 12.6em;
+            right: 7.3em;
+            width: 58px;
+        }
+
+        .three-hero h1 {
+            font-size: 14px;
+        }
+
+        .three-hero p {
+            font-size: 12px;
+        }
+
+        .fx-four-hero{
+            margin-top: 70px;
+            justify-content: space-between;
+            height: 500px;
+        }
+
+        .fx-four{
+            height: 500px;
+        }
+
+        .fx-four-images img {
+            width: 50px;
+            height: min-content;
+        }
+        .one, .for, .seven{
+            position: absolute;
+            left: 60px;
+        }
+        .two, .five, .oito{
+            position: absolute;
+            left: 130px;
+        }
+        .three,.six,.nine{
+            position: absolute;
+            left: 200px;
+        }
+
+        .one,.two,.three{
+            top: 10px;
+        }
+             
+        .fx-four-images{
+            height: 200px;
+        }
+
+        .fx-four-text{
+            width: 300px;
+        }
+
+        .fx-four-text h1{
+            font-size: 14px;
+        }
+
+        .fx-four-text p{
+            font-size: 12px;
+        }
+
+        .fx-five{
+            height: 400px;
+            width: 300px;
+        }
+
+        .fx-five p{
+            font-size: 11px;
+        }
+
+        .fx-five-title p{
+            font-size: 14px;
+        }
+
+        .fx-five-hero{
+            height: 300px;
+            align-items: center;
+        }
+
+        .endereco{
+            width: 300px;
+        }
+
+        .fx-five-local iframe{
+            width: 270px;
+            height: 160px;
+        }
+        .fx-five-button{
+            align-self: center;
+            padding: 1px;
+            height: 25px;
+            width: 110px;
+        }
+        .fx-five-button img{
+            width: 15px;
+        }
+
+        .rodape{
+            width: 300px;
+        }
+        .rodape-hero p{
+            font-size: 12px;
+        }
+        .rodape-hero a{
+            font-size: 12px;
+        }
+        .rodape-hero h1{
+            font-size: 25px;
+        }
+        
+
+        .sua-cafeteria{
+            height: 80px;
+            left: 20px;
+        }
+        .rodape-esquerda{
+            width: 270px;
+        }
+
+        .rodape-direita{
+            width: 270px;
+        }
     }
 }
