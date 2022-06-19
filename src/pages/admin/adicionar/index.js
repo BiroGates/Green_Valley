@@ -38,7 +38,7 @@ export default function Adicionar() {
         try{
             const funcionario = storage('usuario-logado').data.id;
             if(!imagem) throw new Error('Por favor enviei uma imagem!');
-            if(id == 0){
+            if(id === 0){
                 const resp = await enviarProduto(nome, preco, descricao, categoria, funcionario);
                 await enviarImagem(imagem, resp.insertedId);
                 setId(resp.insertedId);
@@ -60,9 +60,9 @@ export default function Adicionar() {
             }   
         }catch(error) {
             if(error.response){
-                toast.dark('❗ Todos os campos são necessarios!');
-            }else{
                 toast.dark('❗ ' + error.message); 
+            }else{
+                toast.dark('❗ ' + error);
             }
         }
     }
