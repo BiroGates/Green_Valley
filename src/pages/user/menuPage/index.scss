@@ -1,5 +1,7 @@
 
-
+*{
+    border: 1px solid green;
+}
 .main-menu{
     background-color: #FFCC80;
     display: flex;
@@ -108,16 +110,40 @@
 
 
 @media ( max-width:480px ){
-    .produtos-container{
-        
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
+    .main-menu{
 
-    .filter-buttons .btn{
-        width: 130px;
-        height: 30px;
+        .produtos-container{
+            
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
     
-        font-size: 1.2em;
+        .filter-buttons{
+            flex-wrap: wrap;
+        }
+        .filter-buttons .btn{
+            width: 130px;
+            height: 30px;
+            
+            margin-bottom: 15px;
+
+            font-size: 1.2em;
+        }
+
+        .produto{
+            width: 270px;
+            height: 270px;
+        
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            
+            border-radius: 10px;
+        
+            margin-bottom: 50px;
+        
+            background-color: white;
+        }
     }
 }
