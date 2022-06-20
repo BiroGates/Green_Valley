@@ -4,25 +4,30 @@ const api = axios.create({
     baseURL: 'http://localhost:5000'
 });
 
+
 export async function listarTodosOsProdutos() {
     const resposta = await api.get('/produto');
     return resposta.data;
 }
+
 
 export async function buscarPorNome(nome) {
     const resposta = await api.get(`/produto/q?nome=${nome}`);
     return resposta.data;
 }
 
+
 export async function buscarPorId(id) {
     const resposta = await api.get(`/produto/buscarid/${id}`);
     return resposta.data;
 }
 
+
 export async function buscarPorCategoria(categoria) {
     const resposta = await api.get(`/produto/${categoria}`);
     return resposta.data
 }
+
 
 export async function enviarProduto(nome, preco, descricao, categoria, funcionario) {
     const resposta = await api.post(`/produto`, {
@@ -35,6 +40,7 @@ export async function enviarProduto(nome, preco, descricao, categoria, funcionar
     return resposta.data;
 }
 
+
 export async function alterarProduto(nome, preco, descricao, categoria, id) {
     const resposta = await api.put(`/produto/${id}`, {
         nome: nome,
@@ -44,6 +50,7 @@ export async function alterarProduto(nome, preco, descricao, categoria, id) {
     });
     return resposta.data;
 }
+
 
 export async function enviarImagem(imagem, id) {
     const formData = new FormData();
@@ -56,6 +63,7 @@ export async function enviarImagem(imagem, id) {
     
     return resposta.status;
 }
+
 
 export function pegarImagem(imagem) {
     return `${api.getUri()}/${imagem}`

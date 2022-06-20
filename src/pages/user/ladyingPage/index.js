@@ -103,8 +103,7 @@ export default function LandyingPage() {
                         momentos agradáveis dentro do nosso estabelecimento
                     </p>
 
-                    <div class="one-button">
-                        <a href="">DESCOBRIR</a>
+                    <div>
                     </div>
                 </motion.div>
                 <motion.div 
