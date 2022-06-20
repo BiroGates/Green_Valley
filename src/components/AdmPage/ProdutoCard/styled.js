@@ -63,6 +63,7 @@ const StyleAdmProduto = styled.div`
         font-size: 1em;
         font-family: 'regular';
 
+        overflow: auto;
     }
 
     .item-text-footer{

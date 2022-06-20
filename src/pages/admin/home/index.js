@@ -19,7 +19,7 @@ import './index.scss';
 
 // Assets
 import user_icon from '../../../assets/images/admPage/user_icon.png';
-import user_icon_black from '../../../assets/images/admPage/cameraa.png';
+import user_icon_black from '../../../assets/images/admPage/user--v1.png';
 import menu_home from '../../../assets/images/admPage/casinha.png'
 import menu_hamburger from '../../../assets/images/admPage/menuzinho.png'
 import menu_plus from '../../../assets/images/admPage/mais.png'
@@ -32,6 +32,11 @@ export default function Home() {
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const navigate = useNavigate();
+
+  function sair(){
+    storage.remove('usuario-logado');
+    navigate('/login')   
+  }
   
   useEffect(()=>{
     if(storage('usuario-logado')){
@@ -42,6 +47,7 @@ export default function Home() {
     }
   },[])
 
+
   return (
     <main className='home-main'>
         <div className='not-responsive-green-bar'>
@@ -51,6 +57,7 @@ export default function Home() {
             <div className='resposive-home' onClick={()=> navigate('/admin')}></div>
             <div className='resposive-adicionar' onClick={()=> navigate('/admin/adicionar')}></div>
             <div className='resposive-consultar' onClick={()=> navigate('/admin/cardapio')}></div>
+            <div className='resposive-sair' onClick={()=> sair()}></div>
         </div>
         <div className='home'>
             <div className='change-img'>

@@ -101,6 +101,11 @@ export default function Adicionar() {
         setImagem(resposta.imagem);
     }
 
+    function sair(){
+        storage.remove('usuario-logado');
+        navigate('/login')   
+    }
+
     useEffect(()=>{
         if(idParam) {
             carregarProduto();
@@ -116,6 +121,7 @@ export default function Adicionar() {
                 <div className='resposive-home' onClick={()=> navigate('/admin')}></div>
                 <div className='resposive-adicionar' onClick={()=> navigate('/admin/adicionar')}></div>
                 <div className='resposive-consultar' onClick={()=> navigate('/admin/cardapio')}></div>
+                <div className='resposive-sair' onClick={()=> sair()}></div>
           </div>
             <div className='addprodutos'>
                 <div className='add-container'>

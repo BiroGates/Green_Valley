@@ -6,6 +6,8 @@ import './index.scss'
 import LeftBar from '../../../components/AdmPage/Leftbar'
 import AdmProduto from '../../../components/AdmPage/ProdutoCard';
 
+import storage from 'local-storage';
+
 import { confirmAlert } from 'react-confirm-alert';
 
 // Api
@@ -55,6 +57,11 @@ export default function Cardapio() {
         })
     }
 
+    function sair(){
+        storage.remove('usuario-logado');
+        navigate('/login')   
+    }
+
     useEffect(()=>{
       carregarTodosOsProdutos();
     },[])
@@ -68,6 +75,7 @@ export default function Cardapio() {
                 <div className='resposive-home' onClick={()=> navigate('/admin')}></div>
                 <div className='resposive-adicionar' onClick={()=> navigate('/admin/adicionar')}></div>
                 <div className='resposive-consultar' onClick={()=> navigate('/admin/cardapio')}></div>
+                <div className='resposive-sair' onClick={()=> sair()}></div>
           </div>
           <div className='cardapio'>
               <div className='products'>

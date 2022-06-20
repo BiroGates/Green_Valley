@@ -110,7 +110,7 @@
         }
     
         .info-img{
-            background-image: url('../../../assets/images/admPage/cameraa.png');
+            background-image: url('../../../assets/images/admPage/user--v1.png');
             background-position: center;
             background-size: cover;
         
@@ -193,6 +193,16 @@
             height: 40px;
 
             background-image: url('../../../assets/images/admPage/menuzinho.png');
+            background-size: cover;
+            background-position: center;
+            
+        }
+        
+        .resposive-sair{
+            width: 40px;
+            height: 40px;
+    
+            background-image: url('../../../assets/images/admPage/sair.png');
             background-size: cover;
             background-position: center;
             
