@@ -283,9 +283,8 @@ export default function LandyingPage() {
                 <div className="sua-cafeteria">
                     <h1>Sua Cafetaria!</h1>
 
-                    <div className="nacionalidade">
-                        <p>Português do Brasil</p>
-                    </div>
+                    <p>Português do Brasil</p>
+                   
                 </div>
                 <div className="rodape-esquerda">
                     <div class="produto">
