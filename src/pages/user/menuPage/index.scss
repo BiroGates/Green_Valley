@@ -1,11 +1,7 @@
-
-*{
-    border: 1px solid green;
-}
 .main-menu{
     background-color: #FFCC80;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     
@@ -90,6 +86,8 @@
     }
     
     .produto img{
+        width: 300px;
+        height: 180px;
         margin: 0px;
     }
     
@@ -105,6 +103,16 @@
 
     .produto div:nth-child(3){
         overflow: auto;
+        text-align: left;
+        margin-left: 20px;
+        font-family: 'medio';
+        
+    }
+    .produto div:nth-child(4){
+        text-align: left;
+        margin-left: 20px;
+        font-family: 'medio';
+        
     }
 }
 

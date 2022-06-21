@@ -50,7 +50,7 @@ export default function LoginPage() {
           <div className="grao-3"><img className='grao-img' src={ graoCafe } alt=""/></div>
           <div className="grao-4"><img className='grao-img' src={ graoCafe } alt=""/></div>
           <div className="container">
-              <div className="logo"><img src={ logo } alt=""/></div>
+              <Link to='/' className="logo"><img src={ logo } alt=""/></Link>
               <div className="vertical-bar"></div>
               <div className="login-form">
                   <div className="input-text"> <input type="text" placeholder='Ex: teste@teste.com.br' value={email} onChange={e => setEmail(e.target.value)} /> </div>

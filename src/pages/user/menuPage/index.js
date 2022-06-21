@@ -26,9 +26,9 @@ export default function Menu() {
     <div className='main-menu'>
         <div className='title'> Cardápio </div>
         <div className='filter-buttons'>
-            <div className='btn' onClick={() => carregarPorCategoria('bebidas')}> Bebidas </div>
-            <div className='btn'onClick={() => carregarPorCategoria('doces')}> Doces </div>
-            <div className='btn'onClick={() => carregarPorCategoria('salgados')}> Salgados </div>
+            <div className='btn' onClick={() => carregarPorCategoria('Bebidas')}> Bebidas </div>
+            <div className='btn'onClick={() => carregarPorCategoria('Doces')}> Doces </div>
+            <div className='btn'onClick={() => carregarPorCategoria('Salgados')}> Salgados </div>
             <div className='btn'onClick={() => carregarTodosOsProdutos()}> Todos </div>
         </div>
         
@@ -38,6 +38,7 @@ export default function Menu() {
               <div><img src={pegarImagem(item.imagem)} alt="" /></div>
               <div> {item.nome} </div> 
               <div> {item.descricao} </div>
+              <div> {item.preco} </div>
             </div>
           )}
         </div>  

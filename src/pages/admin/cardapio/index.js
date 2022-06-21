@@ -81,8 +81,10 @@ export default function Cardapio() {
               <div className='products'>
                   <div className='src-bar'>
                     <div className='titulo'> CARDAPIO </div>
-                    <div className='bar'> <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
-                    <div className='bar-btn' onClick={buscarProdutoPorNome}> BUSCAR </div>
+                    <div className='sub-bar'>
+                        <div className='bar'> <input type="text" placeholder='Ex: Sonho' value={inputValue} onChange={e => setInputValue(e.target.value)}/></div>
+                        <div className='bar-btn' onClick={buscarProdutoPorNome}> BUSCAR </div>
+                    </div>
                   </div>
                   <table>
                     <thead>
